@@ -7,20 +7,20 @@ import java.io.IOException;
 
 public class ArgumentosDirectorioFichero {
 	//IMPORTANTEEE, EL DIRECTORIO QUE LE PASES NO PUEDE TENER ESPACIOS, es decir, una carpeta no puede llamarse "Nueva Carpeta", deber� ser Nueva_Carpeta", sino, crear� una que se llame 
-  //Nueva y ser� una carpeta, porque cuando le das un espacio, el ya piensa que le has metido m�s argumentos, en este caso, se piensa que le has metido 3
+    //Nueva y ser� una carpeta, porque cuando le das un espacio, el ya piensa que le has metido m�s argumentos, en este caso, se piensa que le has metido 3
     public static void main(String[] args) {
         // Comprobar que se pasa exactamente un argumento
-    	if (args.length == 0) {
-    	    System.out.println("No se ha pasado ning�n argumento. Por favor, ejecuta el programa con un nombre de fichero como argumento.");
-    	    return; // Termina el programa si no hay argumentos
-    	} 
-    	else if (args.length == 2) {
-    	    System.out.println("Se han pasado dos argumentos, el primero es el nombre sin la extensi�n del fichero, el segundo ser�a el directorio");
-    	    return;
-    	} 
-    	else {
-    	    System.out.println("Me has pasado un argumento, genial!");
-    	}
+        switch (args.length) {
+            case 0:
+                System.out.println("No se ha pasado ning�n argumento. Por favor, ejecuta el programa con un nombre de fichero como argumento.");
+                return; // Termina el programa si no hay argumentos
+            case 2:
+                System.out.println("Se han pasado dos argumentos, el primero es el nombre sin la extensi�n del fichero, el segundo ser�a el directorio");
+                return;
+            default:
+                System.out.println("Me has pasado un argumento, genial!");
+                break;
+        }
         String nombreFichero = args[0]; // Nombre del archivo pasado como argumento
         String elDirectorio = args[1];
         //guarda en ese String, el nombre que tiene args[0] almacenado dentro, que sera datos.txt que es lo que le
