@@ -1,0 +1,5 @@
+Desarrollar un programa que pase como tercer argumento el contenido del fichero que se va a crear (recuerda que no tiene que haber espacios), los argumentos se pasarán en la llamada al programa a través de la consola de comando o de la terminal.
+
+Por otro lado, quiero que a ese fichero, se le pase a través de un buffer de escritura ese contenido que se va a escribir dentro del .txt, y por último quiero que se lea a través de un buffer de lectura Read.
+
+Trabaja desde el código que os facilito en este archivo comprimido.
