@@ -1,8 +1,15 @@
 # Acceso a Datos
 ## Tarea 1
+### Tarea 1.1
 
+*ListarFichero.java*: Contiene un fichero Java que, al ejecutarlo, lista los archivos y directorios del directorio pasado por
+parámetro.
 
+### Tarea 1.2
 
+*FicheroExiste.java* Comprueba si existe el fichero indicado en la variable *rutaFichero*.
+
+## Ejercicio Obligatorio
 
 # VSCode
 ## Getting Started
