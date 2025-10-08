@@ -17,6 +17,18 @@ public class ManejarFichero {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
+        System.out.print("Indica el directorio de trabajo: ");
+        String directorioTrabajo = sc.nextLine();
+        File dirTrabajo = new File(directorioTrabajo);
+        if (!dirTrabajo.exists()) {
+            System.out.println("El directorio no existe. Creando directorio....");
+            dirTrabajo.mkdirs();
+            System.out.println("Directorio creado.");
+        } else {
+            System.out.println("Directorio de trabajo: " + dirTrabajo.getAbsolutePath());
+        }
+
         menuPrincipal();
         int opcion = sc.nextInt();
 
@@ -25,17 +37,19 @@ public class ManejarFichero {
                 case 1:
                     System.out.print("Indica el nombre del fichero a crear: ");
                     String nombreFichero = sc.next();
-                    crearFichero(nombreFichero);
+                    crearFichero(dirTrabajo, nombreFichero);
                     break;
                 case 2:
                     System.out.print("Indica el nombre del fichero a leer: ");
                     String nombreFicheroLeer = sc.next();
-                    File ficheroLeer = new File(nombreFicheroLeer);
+                    File ficheroLeer = new File(dirTrabajo + File.separator + nombreFicheroLeer);
                     try {
-                        leerFichero(ficheroLeer);
+                        leerFichero(dirTrabajo, ficheroLeer);
                     } catch (IOException e) {
                         System.out.println("Ha ocurrido un error:" + e.getMessage());
                     }
+                    break;
+                
                 default:
                     System.out.println("Opción no válida");
             }
@@ -65,9 +79,9 @@ public class ManejarFichero {
         return fichero;
     }
 
-    private static String leerFichero(File fichero) throws IOException {
+    private static String leerFichero(File dirTrabajo, File fichero) throws IOException {
         
-        FileReader fileReader = new FileReader(fichero);
+        FileReader fileReader = new FileReader(dirTrabajo + File.separator + fichero);
         
         for(int i = 0; i < 300; i++) {
             int caracter = fileReader.read();
@@ -76,14 +90,15 @@ public class ManejarFichero {
             }
             System.out.print((char) caracter);
         }
+        System.out.println("");
 
         fileReader.close();
     
         return fichero.toString();
     }
 
-    private static void crearFichero(String nombreFichero) {
-        File fichero = new File("./" + nombreFichero);
+    private static void crearFichero(File dirTrabajo, String nombreFichero) {
+        File fichero = new File(dirTrabajo + File.separator + nombreFichero);
         try {
             if (fichero.createNewFile()) {
                 System.out.println("Fichero creado: " + fichero.getName());
