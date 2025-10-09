@@ -5,7 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.RandomAccessFile;
-import java.util.RandomAccess;
 import java.util.Scanner;
 
 public class ManejarFichero {
@@ -65,6 +64,14 @@ public class ManejarFichero {
                         System.out.println("\nHa ocurrido un error:" + e.getMessage());
                     }
                     break;
+
+
+
+                case 5:
+                    System.out.print("Indica el nombre del fichero a eliminar: ");
+                    String nombreFicheroEliminar = sc.next();
+                    eliminarFichero(dirTrabajo, nombreFicheroEliminar);
+                    break;
                 default:
                     System.out.println("Opción no válida");
             }
@@ -79,7 +86,8 @@ public class ManejarFichero {
        return fichero;
     }
 
-    private static void eliminarFichero(File dirTrabajo, File fichero) {
+    private static void eliminarFichero(File dirTrabajo, String nombreFichero) {
+        File fichero = new File(dirTrabajo + File.separator + nombreFichero);
         if (fichero.delete()) {
             System.out.println("Fichero " + fichero.getName() + " eliminado.");
         } else {
