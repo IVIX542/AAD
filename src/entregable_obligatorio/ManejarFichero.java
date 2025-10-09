@@ -1,8 +1,11 @@
 package entregable_obligatorio;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.RandomAccessFile;
+import java.util.RandomAccess;
 import java.util.Scanner;
 
 public class ManejarFichero {
@@ -42,14 +45,26 @@ public class ManejarFichero {
                 case 2:
                     System.out.print("Indica el nombre del fichero a leer: ");
                     String nombreFicheroLeer = sc.next();
-                    File ficheroLeer = new File(dirTrabajo + File.separator + nombreFicheroLeer);
+                    
                     try {
-                        leerFichero(dirTrabajo, ficheroLeer);
+                        leerFichero(dirTrabajo, nombreFicheroLeer);
                     } catch (IOException e) {
                         System.out.println("Ha ocurrido un error:" + e.getMessage());
                     }
                     break;
-                
+                case 3:
+                    System.out.print("Indica el nombre del fichero donde insertar texto: ");
+                    String nombreFicheroInsertar = sc.next();
+                    
+                    System.out.print("Indica el texto a insertar: ");
+                    sc.nextLine(); // Consumir el salto de línea pendiente
+                    String insercion = sc.nextLine();
+                    try {
+                        insertarTexto(dirTrabajo, nombreFicheroInsertar, 0, insercion);
+                    } catch (IOException e) {
+                        System.out.println("\nHa ocurrido un error:" + e.getMessage());
+                    }
+                    break;
                 default:
                     System.out.println("Opción no válida");
             }
@@ -64,9 +79,12 @@ public class ManejarFichero {
        return fichero;
     }
 
-    private static Object eliminarFichero(File fichero) {
-        fichero = new File("fichero.txt");
-        return fichero;
+    private static void eliminarFichero(File dirTrabajo, File fichero) {
+        if (fichero.delete()) {
+            System.out.println("Fichero " + fichero.getName() + " eliminado.");
+        } else {
+            System.out.println("No se pudo eliminar el fichero " + fichero.getName() + ". Es posible que no exista.");
+        }
     }
 
     private static Object eliminarTexto(File fichero) {
@@ -74,14 +92,44 @@ public class ManejarFichero {
         return fichero;
     }
 
-    private static Object insertarTexto(File fichero) {
-        fichero = new File("fichero.txt");
-        return fichero;
+    private static void insertarTexto(File dirTrabajo, String nombreFichero, int pos, String insercion) throws FileNotFoundException, IOException {
+        //Declaraciones
+        Scanner sc = new Scanner(System.in);
+        RandomAccessFile ficheroRW = new RandomAccessFile(dirTrabajo+File.separator+nombreFichero, "rw");
+
+        //Inicio
+        System.out.print("Que desea hacer?\n1. Insertar en una posición concreta(1)\n2. Insertar al final del fichero(2): ");
+        int opcion = sc.nextInt();
+        switch (opcion) {
+            case 1: //En caso de querer insertar en una posición específica
+                System.out.print("\nIndica la posición donde insertar el texto: ");
+                pos = sc.nextInt();
+                try {
+                    ficheroRW.seek(pos);
+                    ficheroRW.write((insercion + "\n").getBytes());
+                } catch (IOException e) {
+                    System.out.println("Ha ocurrido un error:" + e.getMessage());
+                }   break;
+            case 2: //En caso de querer insertar al final del fichero
+                try {
+                    ficheroRW.seek(ficheroRW.length());
+                    ficheroRW.writeBytes(insercion + "\n");
+                } catch (IOException e) {
+                    System.out.println("Ha ocurrido un error:" + e.getMessage());
+                }   break;
+            default: //En caso de opción no válida
+                System.out.println("Opción no válida.");
+                break;
+        }
+
+        //Cierres
+        ficheroRW.close();
+        sc.close();
     }
 
-    private static String leerFichero(File dirTrabajo, File fichero) throws IOException {
+    private static void leerFichero(File dirTrabajo, String nombreFichero) throws IOException {
         
-        FileReader fileReader = new FileReader(dirTrabajo + File.separator + fichero);
+        FileReader fileReader = new FileReader(dirTrabajo + File.separator + nombreFichero);
         
         for(int i = 0; i < 300; i++) {
             int caracter = fileReader.read();
@@ -93,8 +141,6 @@ public class ManejarFichero {
         System.out.println("");
 
         fileReader.close();
-    
-        return fichero.toString();
     }
 
     private static void crearFichero(File dirTrabajo, String nombreFichero) {
@@ -111,7 +157,7 @@ public class ManejarFichero {
     }
 
     private static void menuPrincipal() {
-        System.out.println("""
+        System.out.print("""
                            --- Menú Principal ---
                            1. Crear fichero
                            2. Leer fichero
@@ -119,6 +165,8 @@ public class ManejarFichero {
                            4. Eliminar texto
                            5. Eliminar fichero
                            6. Resumen de ficheros que empiezan por...
-                           7. Salir""");
+                           7. Salir
+                           Elige una opción (1-7): """
+                        );
     }
 }
