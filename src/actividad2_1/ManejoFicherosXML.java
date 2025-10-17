@@ -10,9 +10,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.Result;
 import javax.xml.transform.Source;
-import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import org.w3c.dom.DOMImplementation;
@@ -245,15 +243,6 @@ public class ManejoFicherosXML  {
         //Creamos el resultado, es decir, el fichero donde se guardará
         Result resultado = new StreamResult(new File(directorio + File.separator + "Biblioteca.xml"));
 
-        //Creamos el transformer, que se encargará de transformar el origen al resultado
-        Transformer transformador = TransformerFactory.newInstance().newTransformer();
-
-        // Con estas dos líneas, le decimos al transformer que indente el resultado.
-        transformador.setOutputProperty(javax.xml.transform.OutputKeys.INDENT, "yes");
-        transformador.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
-
-        //Transformamos el origen al resultado, es decir, creamos el fichero XML
-        transformador.transform(origen, resultado);
     }
 
 }
