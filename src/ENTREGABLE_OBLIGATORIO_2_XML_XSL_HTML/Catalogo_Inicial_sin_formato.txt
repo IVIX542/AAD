@@ -1,0 +1,101 @@
+ID: vg001  Título: Super Mario Bros.  Año: 1985  Compañía: Nintendo  Consola: NES  Puntuación: 9.8
+ID: vg002  Título: The Legend of Zelda: Ocarina of Time  Año: 1998  Compañía: Nintendo  Consola: N64  Puntuación: 9.6
+ID: vg003  Título: Half-Life 2  Año: 2004  Compañía: Valve  Consola: PC  Puntuación: 9.5
+ID: vg004  Título: Grand Theft Auto V  Año: 2013  Compañía: Rockstar Games  Consola: PS3, Xbox 360  Puntuación: 9.6
+ID: vg005  Título: Red Dead Redemption 2  Año: 2018  Compañía: Rockstar Games  Consola: PS4, Xbox One  Puntuación: 9.8
+ID: vg006  Título: The Witcher 3: Wild Hunt  Año: 2015  Compañía: CD Projekt  Consola: PS4, Xbox One  Puntuación: 9.7
+ID: vg007  Título: Final Fantasy VII  Año: 1997  Compañía: Square Enix  Consola: PS1  Puntuación: 9.5
+ID: vg008  Título: Portal 2  Año: 2011  Compañía: Valve  Consola: PC  Puntuación: 9.7
+ID: vg009  Título: Overwatch  Año: 2016  Compañía: Blizzard Entertainment  Consola: PS4, Xbox One  Puntuación: 9.0
+ID: vg010  Título: Dark Souls  Año: 2011  Compañía: FromSoftware  Consola: PS3, Xbox 360  Puntuación: 9.5
+ID: vg011  Título: Hollow Knight  Año: 2017  Compañía: Team Cherry  Consola: PC  Puntuación: 9.4
+ID: vg012  Título: Celeste  Año: 2018  Compañía: Maddy Makes Games  Consola: PS4, Xbox One  Puntuación: 9.6
+ID: vg013  Título: Bloodborne  Año: 2015  Compañía: FromSoftware  Consola: PS4  Puntuación: 9.7
+ID: vg014  Título: God of War (2018)  Año: 2018  Compañía: Sony Santa Monica  Consola: PS4  Puntuación: 9.8
+ID: vg015  Título: Persona 5  Año: 2016  Compañía: Atlus  Consola: PS3, PS4  Puntuación: 9.5
+ID: vg016  Título: Spelunky  Año: 2008  Compañía: Spelunky Team  Consola: PC  Puntuación: 9.0
+ID: vg017  Título: Stardew Valley  Año: 2016  Compañía: ConcernedApe  Consola: PC  Puntuación: 9.3
+ID: vg018  Título: Undertale  Año: 2015  Compañía: Tofu  Consola: PC  Puntuación: 9.7
+ID: vg019  Título: Journey  Año: 2012  Compañía: Thatgamecompany  Consola: PS3  Puntuación: 9.3
+ID: vg020  Título: Metal Gear Solid  Año: 1998  Compañía: Konami  Consola: PS1  Puntuación: 9.8
+ID: vg021  Título: Super Mario 64  Año: 1996  Compañía: Nintendo  Consola: N64  Puntuación: 9.6
+ID: vg022  Título: Halo: Combat Evolved  Año: 2001  Compañía: Bungie  Consola: Xbox  Puntuación: 9.5
+ID: vg023  Título: BioShock  Año: 2007  Compañía: 2K Games  Consola: PC  Puntuación: 9.6
+ID: vg024  Título: Assassin's Creed II  Año: 2009  Compañía: Ubisoft  Consola: PS3, Xbox 360  Puntuación: 9.5
+ID: vg025  Título: Mass Effect 2  Año: 2010  Compañía: BioWare  Consola: Xbox 360, PC  Puntuación: 9.7
+ID: vg026  Título: Rocket League  Año: 2015  Compañía: Psyonix  Consola: PS4, Xbox One  Puntuación: 9.0
+ID: vg027  Título: Celeste  Año: 2018  Compañía: Maddy Makes Games  Consola: PS4, Xbox One  Puntuación: 9.6
+ID: vg028  Título: Hollow Knight  Año: 2017  Compañía: Team Cherry  Consola: PC  Puntuación: 9.4
+ID: vg029  Título: Bloodborne  Año: 2015  Compañía: FromSoftware  Consola: PS4  Puntuación: 9.7
+ID: vg030  Título: God of War (2018)  Año: 2018  Compañía: Sony Santa Monica  Consola: PS4  Puntuación: 9.8
+ID: vg031  Título: The Last of Us  Año: 2013  Compañía: Naughty Dog  Consola: PS3  Puntuación: 9.7
+ID: vg032  Título: Uncharted 2: El reino de los ladrones  Año: 2009  Compañía: Naughty Dog  Consola: PS3  Puntuación: 9.6
+ID: vg033  Título: Red Dead Redemption  Año: 2010  Compañía: Rockstar Games  Consola: PS3, Xbox 360  Puntuación: 9.8
+ID: vg034  Título: BioShock Infinite  Año: 2013  Compañía: 2K Games  Consola: PS3, Xbox 360  Puntuación: 9.3
+ID: vg035  Título: Mass Effect  Año: 2007  Compañía: BioWare  Consola: Xbox 360, PC  Puntuación: 9.5
+ID: vg036  Título: Halo 3  Año: 2007  Compañía: Bungie  Consola: Xbox 360  Puntuación: 9.6
+ID: vg037  Título: Super Mario Odyssey  Año: 2017  Compañía: Nintendo  Consola: Switch  Puntuación: 9.7
+ID: vg038  Título: Persona 5 Royal  Año: 2019  Compañía: Atlus  Consola: PS4  Puntuación: 9.8
+ID: vg039  Título: Dark Souls III  Año: 2016  Compañía: FromSoftware  Consola: PS4, Xbox One  Puntuación: 9.5
+ID: vg040  Título: Bloodborne  Año: 2015  Compañía: FromSoftware  Consola: PS4  Puntuación: 9.7
+ID: vg041  Título: God of War (2018)  Año: 2018  Compañía: Sony Santa Monica  Consola: PS4  Puntuación: 9.8
+ID: vg042  Título: Spider-Man (2018)  Año: 2018  Compañía: Insomniac Games  Consola: PS4  Puntuación: 9.3
+ID: vg043  Título: Horizon Zero Dawn  Año: 2017  Compañía: Guerrilla Games  Consola: PS4  Puntuación: 9.0
+ID: vg044  Título: Ghost of Tsushima  Año: 2020  Compañía: Sucker Punch Productions  Consola: PS4  Puntuación: 9.7
+ID: vg045  Título: Cyberpunk 2077  Año: 2020  Compañía: CD Projekt  Consola: PS4, Xbox One  Puntuación: 9.9
+ID: vg046  Título: Final Fantasy XV  Año: 2016  Compañía: Square Enix  Consola: PS4, Xbox One  Puntuación: 8.7
+ID: vg047  Título: Assassin's Creed IV: Black Flag  Año: 2013  Compañía: Ubisoft  Consola: PS3, Xbox 360  Puntuación: 8.9
+ID: vg048  Título: Far Cry 3  Año: 2012  Compañía: Ubisoft  Consola: PS3, Xbox 360  Puntuación: 9.0
+ID: vg049  Título: Skyrim  Año: 2011  Compañía: Bethesda Game Studios  Consola: PS3, Xbox 360  Puntuación: 9.5
+ID: vg050  Título: DOOM (2016)  Año: 2016  Compañía: id Software  Consola: PS4, Xbox One  Puntuación: 8.9
+ID: vg051  Título: Rocket League  Año: 2015  Compañía: Psyonix  Consola: PS4, Xbox One  Puntuación: 9.0
+ID: vg052  Título: Among Us  Año: 2018  Compañía: Innersloth  Consola: PC  Puntuación: 8.5
+ID: vg053  Título: Valorant  Año: 2020  Compañía: Riot Games  Consola: PC  Puntuación: 8.9
+ID: vg054  Título: League of Legends  Año: 2009  Compañía: Riot Games  Consola: PC  Puntuación: 9.0
+ID: vg055  Título: Counter-Strike: Global Offensive  Año: 2012  Compañía: Valve  Consola: PC  Puntuación: 8.8
+ID: vg056  Título: World of Warcraft  Año: 2004  Compañía: Blizzard Entertainment  Consola: PC  Puntuación: 9.1
+ID: vg057  Título: StarCraft II  Año: 2010  Compañía: Blizzard Entertainment  Consola: PC  Puntuación: 9.0
+ID: vg058  Título: Diablo III  Año: 2012  Compañía: Blizzard Entertainment  Consola: PS3, Xbox 360  Puntuación: 8.7
+ID: vg059  Título: Overwatch  Año: 2016  Compañía: Blizzard Entertainment  Consola: PS4, Xbox One  Puntuación: 9.0
+ID: vg060  Título: Expedition 33  Año: 2025  Compañía: Sandfall Interactive  Consola: PC  Puntuación: 9.9
+ID: vg061  Título: Red Dead Redemption 2  Año: 2018  Compañía: Rockstar Games  Consola: PS4, Xbox One  Puntuación: 9.8
+ID: vg062  Título: Grand Theft Auto V  Año: 2013  Compañía: Rockstar Games  Consola: PS4, Xbox One  Puntuación: 9.7
+ID: vg063  Título: Hogwarts Legacy  Año: 2023  Compañía: Portkey Games  Consola: PS5, Xbox Series X/S  Puntuación: 8.7
+ID: vg064  Título: TrackMania Turbo  Año: 2016  Compañía: Nadeo  Consola: PS4, Xbox One  Puntuación: 8.0
+ID: vg065  Título: Star Wars Jedi: Survivor  Año: 2023  Compañía: Respawn Entertainment  Consola: PS5, Xbox Series X/S  Puntuación: 8.5
+ID: vg066  Título: Dark Souls Trilogy  Año: 2020  Compañía: FromSoftware  Consola: PS4, Xbox One  Puntuación: 9.0
+ID: vg067  Título: Dragon Ball FighterZ  Año: 2018  Compañía: Arc System Works  Consola: PS4, Xbox One  Puntuación: 8.5
+ID: vg068  Título: FIFA 23  Año: 2022  Compañía: EA Sports  Consola: PS4, Xbox One  Puntuación: 8.0
+ID: vg069  Título: Doom Eternal  Año: 2020  Compañía: id Software  Consola: PS4, Xbox One  Puntuación: 9.0
+ID: vg070  Título: Two Point Museum  Año: 2025  Compañía: Two Point Studios  Consola: PC  Puntuación: 8.2
+ID: vg071  Título: Pokémon Leyendas ZA  Año: 2025  Compañía: Nintendo  Consola: Switch, Switch 2  Puntuación: 7.5
+ID: vg072  Título: Minecraft  Año: 2011  Compañía: Mojang  Consola: PC  Puntuación: 9.0
+ID: vg073  Título: EA Sports FC 25  Año: 2024  Compañía: EA Sports  Consola: PS4, Xbox One  Puntuación: 8.5
+ID: vg074  Título: Sid Meier's Civilization VII  Año: 2025  Compañía: Firaxis Games  Consola: PC  Puntuación: 9.0
+ID: vg075  Título: Farming Simulator 25  Año: 2025  Compañía: Giants Software  Consola: PC  Puntuación: 8.0
+ID: vg076  Título: EA Sports FC 24  Año: 2023  Compañía: EA Sports  Consola: PS4, Xbox One  Puntuación: 8.2
+ID: vg077  Título: Prince of Persia  Año: 2025  Compañía: Ubisoft  Consola: PC  Puntuación: 7.8
+ID: vg078  Título: Like a Dragon: Pirate Yakuza in Hawaii  Año: 2025  Compañía: Sega  Consola: PC  Puntuación: 8.0
+ID: vg079  Título: Prince of Persia: Warrior Within  Año: 2025  Compañía: Ubisoft  Consola: PC  Puntuación: 8.1
+ID: vg080  Título: Sand Land  Año: 2025  Compañía: Bandai Namco  Consola: PC  Puntuación: 7.9
+ID: vg081  Título: RoboCop: Rogue City  Año: 2025  Compañía: Daedalic Entertainment  Consola: PC  Puntuación: 8.3
+ID: vg082  Título: Star Wars Jedi: Survivor  Año: 2023  Compañía: Respawn Entertainment  Consola: PS5, Xbox Series X/S  Puntuación: 8.5
+ID: vg083  Título: Dark Souls Trilogy  Año: 2020  Compañía: FromSoftware  Consola: PS4, Xbox One  Puntuación: 9.0
+ID: vg084  Título: Dragon Ball FighterZ  Año: 2018  Compañía: Arc System Works  Consola: PS4, Xbox One  Puntuación: 8.5
+ID: vg085  Título: Kingdom Hearts III Año: 2019  Compañía: Square Enix  Consola: PC, PS4, Xbox One  Puntuación: 9.7
+ID: vg086  Título: Doom Eternal  Año: 2020  Compañía: id Software  Consola: PS4, Xbox One  Puntuación: 9.0
+ID: vg087  Título: Two Point Museum  Año: 2025  Compañía: Two Point Studios  Consola: PC  Puntuación: 8.2
+ID: vg088  Título: Remember me  Año: 2025  Compañía: Capcom  Consola: PC, Xbox360, PS3  Puntuación: 9.8
+ID: vg089  Título: Minecraft  Año: 2011  Compañía: Mojang  Consola: PC  Puntuación: 9.0
+ID: vg090  Título: EA Sports FC 25  Año: 2024  Compañía: EA Sports  Consola: PS4, Xbox One  Puntuación: 8.5
+ID: vg091  Título: Kingdom Come: Deliverance II  Año: 2025  Compañía: Warhorse Studios  Consola: PS5, Xbox Series X/S, PC  Puntuación: 8.8
+ID: vg092  Título: Donkey Kong Bananza  Año: 2025  Compañía: Nintendo  Consola: Switch 2  Puntuación: 9.6
+ID: vg093  Título: Alan Wake Remastered  Año: 2021  Compañía: Remedy Entertainment  Consola: PS5, Xbox Series X/S, PC  Puntuación: 8.9
+ID: vg094  Título: Split Fiction  Año: 2025  Compañía: Kepler Interactive  Consola: PS5, Xbox Series X/S, PC, Switch 2  Puntuación: 9.1
+ID: vg095  Título: Death Stranding 2: On the Beach  Año: 2025  Compañía: Kojima Productions  Consola: PS5, PC  Puntuación: 9.0
+ID: vg096  Título: Despelote  Año: 2025  Compañía: Unknown  Consola: PC  Puntuación: 8.9
+ID: vg097  Título: The Talos Principle: Reawakened  Año: 2025  Compañía: Croteam  Consola: PS5, Xbox Series X/S, PC  Puntuación: 8.9
+ID: vg098  Título: Monster Hunter Wilds  Año: 2025  Compañía: Capcom  Consola: PS5, Xbox Series X/S, PC  Puntuación: 8.8
+ID: vg099  Título: Kingdom Come: Deliverance II  Año: 2025  Compañía: Warhorse Studios  Consola: PS5, Xbox Series X/S, PC  Puntuación: 8.8
+ID: vg100  Título: Sid Meier's Civilization VII  Año: 2025  Compañía: Firaxis Games  Consola: PS4, PS5, Xbox One, Xbox Series X/S, PC, Switch 2  Puntuación: 9.0
+

@@ -5,18 +5,27 @@ import java.io.File;
 import java.util.Scanner;
 
 //Librerías para manejar XML
+//Librerías para construir el documento XML
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+//Librerías para transformar el documento XML
 import javax.xml.transform.Result;
 import javax.xml.transform.Source;
 import javax.xml.transform.TransformerException;
-import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+import javax.xml.transform.dom.DOMSource;
+//Librerías del API DOM
 import org.w3c.dom.DOMImplementation;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Text;
+//Librerias SAX para leer el XML
+import org.xml.sax.Attributes;
+import org.xml.sax.SAXException;
+import org.xml.sax.helpers.DefaultHandler;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
 
 public class ManejoFicherosXML  {
 
@@ -243,6 +252,65 @@ public class ManejoFicherosXML  {
         //Creamos el resultado, es decir, el fichero donde se guardará
         Result resultado = new StreamResult(new File(directorio + File.separator + "Biblioteca.xml"));
 
+        leerXML(directorio, "Biblioteca.xml");
+
+    }
+
+    public static void leerXML(String directorio, String nombreFichero){
+        try {
+            //Creamos la "fábrica de parsers". Nos dará una instancia del parser bien configurada
+            SAXParserFactory fabrica = SAXParserFactory.newInstance();
+            
+            //Con la fábrica, creamos el parser SAX. Es la herramienta proporcionada por la fábrica
+            //para leer XML.
+            SAXParser parser = fabrica.newSAXParser(); 
+
+            //Creamos un "manejador" (handler) que se encargará de procesar el XML
+            //El parser no guardará los datos en memoria, sino que lanzará eventos cuando encuentre etiquetas
+            //y el manejador se encargará de procesarlos.
+            DefaultHandler manejador = new DefaultHandler(){
+                //Booleanos para saber la etiqueta que estamos procesando
+                boolean bTitulo = false;
+                boolean bAutor = false;
+                boolean bAnioPublicacion = false;
+                boolean bGeneroLiterario = false;
+
+                public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+                    //si la etiqueta es Titulo, activamos bTitulo
+                    if (qName.equalsIgnoreCase("Titulo")) {
+                        bTitulo = true;
+                    } else if (qName.equalsIgnoreCase("Autor")) {//si la etiqueta es Autor, activamos bAutor
+                        bAutor = true;
+                    } else if (qName.equalsIgnoreCase("AñoPublicacion")) {//si la etiqueta es AñoPublicacion, activamos bAnioPublicacion
+                        bAnioPublicacion = true;
+                    } else if (qName.equalsIgnoreCase("GeneroLiterario")) {//si la etiqueta es GeneroLiterario, activamos GeneroLiterario
+                        bGeneroLiterario = true;
+                    }
+                }
+
+                public void characters(char ch[], int start, int length) throws SAXException {
+                    //Dependiendo de qué etiqueta estemos procesando, mostramos su contenido
+                    if (bTitulo) {
+                        System.out.println("Título: " + new String(ch, start, length));
+                        bTitulo = false;
+                    } else if (bAutor) {
+                        System.out.println("Autor: " + new String(ch, start, length));
+                        bAutor = false;
+                    } else if (bAnioPublicacion) {
+                        System.out.println("Año de Publicación: " + new String(ch, start, length));
+                        bAnioPublicacion = false;
+                    } else if (bGeneroLiterario) {
+                        System.out.println("Género Literario: " + new String(ch, start, length));
+                        bGeneroLiterario = false;
+                    }
+                }
+            };
+
+            parser.parse(new File(directorio + File.separator + nombreFichero), manejador);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }
