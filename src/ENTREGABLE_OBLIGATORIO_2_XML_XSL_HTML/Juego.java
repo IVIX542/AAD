@@ -12,6 +12,7 @@ public class Juego {
     private String titulo;
     private int anio;
     private String compania;
+    private String consola;
     private double puntuacion;
 
     /**
@@ -22,11 +23,12 @@ public class Juego {
      * @param compania String
      * @param puntuacion double
      */
-    public Juego(String id, String titulo, int anio, String compania, double puntuacion) {
+    public Juego(String id, String titulo, int anio, String compania, String consola, double puntuacion) {
         this.id = id;
         this.titulo = titulo;
         this.anio = anio;
         this.compania = compania;
+        this.consola = consola;
         this.puntuacion = puntuacion;
     }
 
@@ -38,6 +40,7 @@ public class Juego {
         this.titulo = "";
         this.anio = 0;
         this.compania = "";
+        this.consola = "";
         this.puntuacion = 0.0;
     }
 
@@ -99,6 +102,19 @@ public class Juego {
      */
     public void setCompania(String compania) {
         this.compania = compania;
+    }
+
+    /**
+     * @return String devuelve la consola
+     */
+    public String getConsola() {
+        return consola;
+    }
+    /**
+     * @param consola la consola a establecer
+     */
+    public void setConsola(String consola) {
+        this.consola = consola;
     }
 
     /**
