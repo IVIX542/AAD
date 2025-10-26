@@ -8,14 +8,21 @@ public class Juego {
      * puntuacion: Puntuación del juego (decimal: 8.0).
      */
 
-    private int id;
+    private String id;
     private String titulo;
     private int anio;
     private String compania;
     private double puntuacion;
 
-    // Constructor
-    public Juego(int id, String titulo, int anio, String compania, double puntuacion) {
+    /**
+     * Constructor principal de la clase Juego.
+     * @param id int
+     * @param titulo String
+     * @param anio int
+     * @param compania String
+     * @param puntuacion double
+     */
+    public Juego(String id, String titulo, int anio, String compania, double puntuacion) {
         this.id = id;
         this.titulo = titulo;
         this.anio = anio;
@@ -23,18 +30,32 @@ public class Juego {
         this.puntuacion = puntuacion;
     }
 
+    /**
+     * Constructor vacío de la clase Juego.
+     */
+    public Juego() {
+        this.id = "0";
+        this.titulo = "";
+        this.anio = 0;
+        this.compania = "";
+        this.puntuacion = 0.0;
+    }
+
+    //Metodos
+    
+
     // Getters y Setters
     /**
      * @return int devuelve el id
      */
-    public int getId() {
+    public String getId() {
         return id;
     }
 
     /**
      * @param id el id a establecer
      */
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
