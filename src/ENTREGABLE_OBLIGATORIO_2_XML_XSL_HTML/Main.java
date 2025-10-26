@@ -1,7 +1,10 @@
 /**
  * Clase Main que contiene el método main para la ejecución del programa.
  * @author Iván López Benítez
- */
+ * @version 1.0
+ * Fecha: 26/10/2025
+*/
+
 //Manejo de ficheros
 import java.io.File;
 import java.io.FileReader;
@@ -11,16 +14,23 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
+        extraerDatos();
+
+    }
+
+    /**
+     * Método para extraer los datos del fichero de texto y mostrarlos por consola.
+     * @since 1.0
+     */
+    public static void extraerDatos(){
         try {
             //Declaracion de variables relacionadas con el txt
             File txt = new File("Catalogo_inicial_sin_formato.txt");
             FileReader fr = new FileReader(txt);
             BufferedReader br = new BufferedReader(fr);
             String linea;
-            int contador = 0;
             //Lectura del fichero línea a línea
             while((linea = br.readLine()) != null && !linea.isEmpty()) {
-                contador++;
                 Juego juego = new Juego();
                 //Extracción de datos de la línea
                 // ID
@@ -38,13 +48,7 @@ public class Main {
 
                 //Asignación de los atributos de cada juego:
                 //ID
-                if (contador>=1 && contador < 10) {
-                    juego.setId(id);
-                } else if (contador >= 10 && contador < 100) {
-                    juego.setId(id);
-                } else if(contador >= 100) {
-                    juego.setId(id);
-                }
+                juego.setId(id);
                 //Título
                 juego.setTitulo(titulo);
                 //Año
@@ -68,6 +72,5 @@ public class Main {
         } catch (IOException e) {
             System.out.println("Error al leer el fichero: " + e.getMessage());
         }
-
     }
 }
