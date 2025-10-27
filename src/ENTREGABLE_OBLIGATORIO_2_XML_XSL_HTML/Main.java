@@ -2,6 +2,7 @@
  * Clase Main que contiene el método main para la ejecución del programa.
  * @author Iván López Benítez
  * @version 1.1
+ * @see Juego
  * Fecha: 26/10/2025
 */
 
@@ -17,6 +18,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.Source;
+import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Result;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.Transformer;
@@ -102,6 +104,7 @@ public class Main {
                 System.out.println("Compañía: " + juego.getCompania());
                 System.out.println("Consola: " + juego.getConsola());
                 System.out.println("Puntuacion: " + juego.getPuntuacion());
+                System.out.println("Recomendacion: " + juego.getRecomendacion());
             }
             br.close();
             
@@ -124,56 +127,72 @@ public class Main {
             DOMImplementation implementacion = constructor.getDOMImplementation();
 
             //Creación del documento XML
-            Document documento = implementacion.createDocument(null, xml.getName(), null);
+            Document documento = implementacion.createDocument(null, xml.getName().substring(0, xml.getName().indexOf('.')), null);
             documento.setXmlVersion("1.0");
 
             //Creación de los elementos principales
-            Element videojuegos = documento.createElement("Videojuegos");
+            Element videojuegos = documento.createElement("videojuegos");
 
+            //Bucle SOLO para cada videojuego en el arraylist
             for (Juego juego : juegos) {
 
-                Element videojuego = documento.createElement("Videojuego");
+                Element videojuego = documento.createElement("videojuego");
                 videojuego.setAttribute("id", juego.getId());
 
                 //Elementos de cada videojuego
                 //Titulo
-                Element titulo = documento.createElement("Titulo");
+                Element titulo = documento.createElement("titulo");
                 Text tetxTitulo = documento.createTextNode(juego.getTitulo());
                 titulo.appendChild(tetxTitulo);
                 videojuego.appendChild(titulo);
                 //Año
-                Element anio = documento.createElement("Año");
+                Element anio = documento.createElement("año");
                 Text textAnio = documento.createTextNode(juego.getAnio() + "");
                 anio.appendChild(textAnio);
                 videojuego.appendChild(anio);
                 //Compañía
-                Element compania = documento.createElement("Compañía");
+                Element compania = documento.createElement("compañía");
                 Text textCompania = documento.createTextNode(juego.getCompania());
                 compania.appendChild(textCompania);
                 videojuego.appendChild(compania);
                 //Consola
-                Element consola = documento.createElement("Consola");
+                Element consola = documento.createElement("ronsola");
                 Text textConsola = documento.createTextNode(juego.getConsola());
                 consola.appendChild(textConsola);
                 videojuego.appendChild(consola);
                 //Puntuación
-                Element puntuacion = documento.createElement("Puntuación");
+                Element puntuacion = documento.createElement("runtuación");
                 Text textPuntuacion = documento.createTextNode(juego.getPuntuacion() + "");
                 puntuacion.appendChild(textPuntuacion);
                 videojuego.appendChild(puntuacion);
+                //Recomendación (siempre "S", hasta que el usuario lo cambie manualmente)
+                Element recomendacion = documento.createElement("recomendacion");
+                Text textRecomendacion = documento.createTextNode(juego.getRecomendacion());
+                recomendacion.appendChild(textRecomendacion);
+                videojuego.appendChild(recomendacion);
 
+                //Añadir cada videojuego al elemento principal
                 videojuegos.appendChild(videojuego);
                 documento.getDocumentElement().appendChild(videojuegos);
-
-                //Configuracion y creacion del fichero XML
-                Source source = new DOMSource(documento);
-                Result result = new StreamResult(xml);
-
-                Transformer transformer = TransformerFactory.newInstance().newTransformer();
-                transformer.transform(source, result);
             }
 
-        } catch (ParserConfigurationException e) {
+            //Configuracion y creacion del fichero XML
+            Source source = new DOMSource(documento);
+            Result result = new StreamResult(xml);
+
+            //Transformador
+            Transformer transformer = TransformerFactory.newInstance().newTransformer();
+            
+            //Formato con sangrías
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+            transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+
+            //Transformación y creación del XML
+            transformer.transform(source, result);
+
+        }
+        //Excepciones
+        catch (ParserConfigurationException e) {
             System.out.println("Error al crear el XML: " + e.getMessage());
         } catch(TransformerConfigurationException e){
             System.out.println("Error de configuración del transformador: " + e.getMessage());

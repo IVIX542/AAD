@@ -1,5 +1,7 @@
 public class Juego {
     /**
+     * @author Iván López Benítez
+     * @version 1.1
      * Variables:
      * id: Identificador único del juego (entero).
      * titulo: Título del juego (cadena de texto).
@@ -14,26 +16,31 @@ public class Juego {
     private String compania;
     private String consola;
     private double puntuacion;
+    private String recomendacion;
 
     /**
      * Constructor principal de la clase Juego.
+     * @since 1.0
      * @param id int
      * @param titulo String
      * @param anio int
      * @param compania String
      * @param puntuacion double
+     * @param recomendacion String
      */
-    public Juego(String id, String titulo, int anio, String compania, String consola, double puntuacion) {
+    public Juego(String id, String titulo, int anio, String compania, String consola, double puntuacion, String recomendacion) {
         this.id = id;
         this.titulo = titulo;
         this.anio = anio;
         this.compania = compania;
         this.consola = consola;
         this.puntuacion = puntuacion;
+        this.recomendacion=recomendacion;
     }
 
     /**
      * Constructor vacío de la clase Juego.
+     * @since 1.0
      */
     public Juego() {
         this.id = "0";
@@ -42,6 +49,7 @@ public class Juego {
         this.compania = "";
         this.consola = "";
         this.puntuacion = 0.0;
+        this.recomendacion="S";
     }
 
     //Metodos
@@ -50,6 +58,7 @@ public class Juego {
     // Getters y Setters
     /**
      * @return int devuelve el id
+     * @since 1.0
      */
     public String getId() {
         return id;
@@ -57,6 +66,7 @@ public class Juego {
 
     /**
      * @param id el id a establecer
+     * @since 1.0
      */
     public void setId(String id) {
         this.id = id;
@@ -64,6 +74,7 @@ public class Juego {
 
     /**
      * @return String devuelve el titulo
+     * @since 1.0
      */
     public String getTitulo() {
         return titulo;
@@ -71,6 +82,7 @@ public class Juego {
 
     /**
      * @param titulo el titulo a establecer
+     * @since 1.0
      */
     public void setTitulo(String titulo) {
         this.titulo = titulo;
@@ -78,6 +90,7 @@ public class Juego {
 
     /**
      * @return int devuelve el anio
+     * @since 1.0
      */
     public int getAnio() {
         return anio;
@@ -85,13 +98,15 @@ public class Juego {
 
     /**
      * @param anio el año a establecer
+     * @since 1.0
      */
     public void setAnio(int anio) {
         this.anio = anio;
     }
 
     /**
-     * @return String devuelve la compañía
+     * @return String devuelve la compañíaç
+     * @since 1.0
      */
     public String getCompania() {
         return compania;
@@ -99,6 +114,7 @@ public class Juego {
 
     /**
      * @param compania la compañía a establecer
+     * @since 1.0
      */
     public void setCompania(String compania) {
         this.compania = compania;
@@ -106,12 +122,14 @@ public class Juego {
 
     /**
      * @return String devuelve la consola
+     * @since 1.0
      */
     public String getConsola() {
         return consola;
     }
     /**
      * @param consola la consola a establecer
+     * @since 1.0
      */
     public void setConsola(String consola) {
         this.consola = consola;
@@ -119,6 +137,7 @@ public class Juego {
 
     /**
      * @return double devuelve la puntuacion
+     * @since 1.0
      */
     public double getPuntuacion() {
         return puntuacion;
@@ -126,9 +145,26 @@ public class Juego {
 
     /**
      * @param puntuacion la puntuacion a establecer
+     * @since 1.0
      */
     public void setPuntuacion(double puntuacion) {
         this.puntuacion = puntuacion;
+    }
+
+    /**
+     * @return double devuelve la recomendacion
+     * @since 1.1
+     */
+    public String getRecomendacion(){
+        return recomendacion;
+    }
+
+    /**
+     * @param recomendacion la recomendacion a establecer
+     * @since 1.1
+     */
+    public void setRecomendacion(String recomendacion){
+        this.recomendacion=recomendacion;
     }
 
 }

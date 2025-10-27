@@ -1,1 +1,805 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><Catalogo_juegos.xml><Videojuegos><Videojuego id="vg001"><Titulo>Super Mario Bros.</Titulo><Año>1985</Año><Compañía>Nintendo</Compañía><Consola>: NES</Consola><Puntuación>9.8</Puntuación></Videojuego><Videojuego id="vg002"><Titulo>The Legend of Zelda: Ocarina of Time</Titulo><Año>1998</Año><Compañía>Nintendo</Compañía><Consola>: N64</Consola><Puntuación>9.6</Puntuación></Videojuego><Videojuego id="vg003"><Titulo>Half-Life 2</Titulo><Año>2004</Año><Compañía>Valve</Compañía><Consola>: PC</Consola><Puntuación>9.5</Puntuación></Videojuego><Videojuego id="vg004"><Titulo>Grand Theft Auto V</Titulo><Año>2013</Año><Compañía>Rockstar Games</Compañía><Consola>: PS3, Xbox 360</Consola><Puntuación>9.6</Puntuación></Videojuego><Videojuego id="vg005"><Titulo>Red Dead Redemption 2</Titulo><Año>2018</Año><Compañía>Rockstar Games</Compañía><Consola>: PS4, Xbox One</Consola><Puntuación>9.8</Puntuación></Videojuego><Videojuego id="vg006"><Titulo>The Witcher 3: Wild Hunt</Titulo><Año>2015</Año><Compañía>CD Projekt</Compañía><Consola>: PS4, Xbox One</Consola><Puntuación>9.7</Puntuación></Videojuego><Videojuego id="vg007"><Titulo>Final Fantasy VII</Titulo><Año>1997</Año><Compañía>Square Enix</Compañía><Consola>: PS1</Consola><Puntuación>9.5</Puntuación></Videojuego><Videojuego id="vg008"><Titulo>Portal 2</Titulo><Año>2011</Año><Compañía>Valve</Compañía><Consola>: PC</Consola><Puntuación>9.7</Puntuación></Videojuego><Videojuego id="vg009"><Titulo>Overwatch</Titulo><Año>2016</Año><Compañía>Blizzard Entertainment</Compañía><Consola>: PS4, Xbox One</Consola><Puntuación>9.0</Puntuación></Videojuego><Videojuego id="vg010"><Titulo>Dark Souls</Titulo><Año>2011</Año><Compañía>FromSoftware</Compañía><Consola>: PS3, Xbox 360</Consola><Puntuación>9.5</Puntuación></Videojuego><Videojuego id="vg011"><Titulo>Hollow Knight</Titulo><Año>2017</Año><Compañía>Team Cherry</Compañía><Consola>: PC</Consola><Puntuación>9.4</Puntuación></Videojuego><Videojuego id="vg012"><Titulo>Celeste</Titulo><Año>2018</Año><Compañía>Maddy Makes Games</Compañía><Consola>: PS4, Xbox One</Consola><Puntuación>9.6</Puntuación></Videojuego><Videojuego id="vg013"><Titulo>Bloodborne</Titulo><Año>2015</Año><Compañía>FromSoftware</Compañía><Consola>: PS4</Consola><Puntuación>9.7</Puntuación></Videojuego><Videojuego id="vg014"><Titulo>God of War (2018)</Titulo><Año>2018</Año><Compañía>Sony Santa Monica</Compañía><Consola>: PS4</Consola><Puntuación>9.8</Puntuación></Videojuego><Videojuego id="vg015"><Titulo>Persona 5</Titulo><Año>2016</Año><Compañía>Atlus</Compañía><Consola>: PS3, PS4</Consola><Puntuación>9.5</Puntuación></Videojuego><Videojuego id="vg016"><Titulo>Spelunky</Titulo><Año>2008</Año><Compañía>Spelunky Team</Compañía><Consola>: PC</Consola><Puntuación>9.0</Puntuación></Videojuego><Videojuego id="vg017"><Titulo>Stardew Valley</Titulo><Año>2016</Año><Compañía>ConcernedApe</Compañía><Consola>: PC</Consola><Puntuación>9.3</Puntuación></Videojuego><Videojuego id="vg018"><Titulo>Undertale</Titulo><Año>2015</Año><Compañía>Tofu</Compañía><Consola>: PC</Consola><Puntuación>9.7</Puntuación></Videojuego><Videojuego id="vg019"><Titulo>Journey</Titulo><Año>2012</Año><Compañía>Thatgamecompany</Compañía><Consola>: PS3</Consola><Puntuación>9.3</Puntuación></Videojuego><Videojuego id="vg020"><Titulo>Metal Gear Solid</Titulo><Año>1998</Año><Compañía>Konami</Compañía><Consola>: PS1</Consola><Puntuación>9.8</Puntuación></Videojuego><Videojuego id="vg021"><Titulo>Super Mario 64</Titulo><Año>1996</Año><Compañía>Nintendo</Compañía><Consola>: N64</Consola><Puntuación>9.6</Puntuación></Videojuego><Videojuego id="vg022"><Titulo>Halo: Combat Evolved</Titulo><Año>2001</Año><Compañía>Bungie</Compañía><Consola>: Xbox</Consola><Puntuación>9.5</Puntuación></Videojuego><Videojuego id="vg023"><Titulo>BioShock</Titulo><Año>2007</Año><Compañía>2K Games</Compañía><Consola>: PC</Consola><Puntuación>9.6</Puntuación></Videojuego><Videojuego id="vg024"><Titulo>Assassin's Creed II</Titulo><Año>2009</Año><Compañía>Ubisoft</Compañía><Consola>: PS3, Xbox 360</Consola><Puntuación>9.5</Puntuación></Videojuego><Videojuego id="vg025"><Titulo>Mass Effect 2</Titulo><Año>2010</Año><Compañía>BioWare</Compañía><Consola>: Xbox 360, PC</Consola><Puntuación>9.7</Puntuación></Videojuego><Videojuego id="vg026"><Titulo>Rocket League</Titulo><Año>2015</Año><Compañía>Psyonix</Compañía><Consola>: PS4, Xbox One</Consola><Puntuación>9.0</Puntuación></Videojuego><Videojuego id="vg027"><Titulo>Celeste</Titulo><Año>2018</Año><Compañía>Maddy Makes Games</Compañía><Consola>: PS4, Xbox One</Consola><Puntuación>9.6</Puntuación></Videojuego><Videojuego id="vg028"><Titulo>Hollow Knight</Titulo><Año>2017</Año><Compañía>Team Cherry</Compañía><Consola>: PC</Consola><Puntuación>9.4</Puntuación></Videojuego><Videojuego id="vg029"><Titulo>Bloodborne</Titulo><Año>2015</Año><Compañía>FromSoftware</Compañía><Consola>: PS4</Consola><Puntuación>9.7</Puntuación></Videojuego><Videojuego id="vg030"><Titulo>God of War (2018)</Titulo><Año>2018</Año><Compañía>Sony Santa Monica</Compañía><Consola>: PS4</Consola><Puntuación>9.8</Puntuación></Videojuego><Videojuego id="vg031"><Titulo>The Last of Us</Titulo><Año>2013</Año><Compañía>Naughty Dog</Compañía><Consola>: PS3</Consola><Puntuación>9.7</Puntuación></Videojuego><Videojuego id="vg032"><Titulo>Uncharted 2: El reino de los ladrones</Titulo><Año>2009</Año><Compañía>Naughty Dog</Compañía><Consola>: PS3</Consola><Puntuación>9.6</Puntuación></Videojuego><Videojuego id="vg033"><Titulo>Red Dead Redemption</Titulo><Año>2010</Año><Compañía>Rockstar Games</Compañía><Consola>: PS3, Xbox 360</Consola><Puntuación>9.8</Puntuación></Videojuego><Videojuego id="vg034"><Titulo>BioShock Infinite</Titulo><Año>2013</Año><Compañía>2K Games</Compañía><Consola>: PS3, Xbox 360</Consola><Puntuación>9.3</Puntuación></Videojuego><Videojuego id="vg035"><Titulo>Mass Effect</Titulo><Año>2007</Año><Compañía>BioWare</Compañía><Consola>: Xbox 360, PC</Consola><Puntuación>9.5</Puntuación></Videojuego><Videojuego id="vg036"><Titulo>Halo 3</Titulo><Año>2007</Año><Compañía>Bungie</Compañía><Consola>: Xbox 360</Consola><Puntuación>9.6</Puntuación></Videojuego><Videojuego id="vg037"><Titulo>Super Mario Odyssey</Titulo><Año>2017</Año><Compañía>Nintendo</Compañía><Consola>: Switch</Consola><Puntuación>9.7</Puntuación></Videojuego><Videojuego id="vg038"><Titulo>Persona 5 Royal</Titulo><Año>2019</Año><Compañía>Atlus</Compañía><Consola>: PS4</Consola><Puntuación>9.8</Puntuación></Videojuego><Videojuego id="vg039"><Titulo>Dark Souls III</Titulo><Año>2016</Año><Compañía>FromSoftware</Compañía><Consola>: PS4, Xbox One</Consola><Puntuación>9.5</Puntuación></Videojuego><Videojuego id="vg040"><Titulo>Bloodborne</Titulo><Año>2015</Año><Compañía>FromSoftware</Compañía><Consola>: PS4</Consola><Puntuación>9.7</Puntuación></Videojuego><Videojuego id="vg041"><Titulo>God of War (2018)</Titulo><Año>2018</Año><Compañía>Sony Santa Monica</Compañía><Consola>: PS4</Consola><Puntuación>9.8</Puntuación></Videojuego><Videojuego id="vg042"><Titulo>Spider-Man (2018)</Titulo><Año>2018</Año><Compañía>Insomniac Games</Compañía><Consola>: PS4</Consola><Puntuación>9.3</Puntuación></Videojuego><Videojuego id="vg043"><Titulo>Horizon Zero Dawn</Titulo><Año>2017</Año><Compañía>Guerrilla Games</Compañía><Consola>: PS4</Consola><Puntuación>9.0</Puntuación></Videojuego><Videojuego id="vg044"><Titulo>Ghost of Tsushima</Titulo><Año>2020</Año><Compañía>Sucker Punch Productions</Compañía><Consola>: PS4</Consola><Puntuación>9.7</Puntuación></Videojuego><Videojuego id="vg045"><Titulo>Cyberpunk 2077</Titulo><Año>2020</Año><Compañía>CD Projekt</Compañía><Consola>: PS4, Xbox One</Consola><Puntuación>9.9</Puntuación></Videojuego><Videojuego id="vg046"><Titulo>Final Fantasy XV</Titulo><Año>2016</Año><Compañía>Square Enix</Compañía><Consola>: PS4, Xbox One</Consola><Puntuación>8.7</Puntuación></Videojuego><Videojuego id="vg047"><Titulo>Assassin's Creed IV: Black Flag</Titulo><Año>2013</Año><Compañía>Ubisoft</Compañía><Consola>: PS3, Xbox 360</Consola><Puntuación>8.9</Puntuación></Videojuego><Videojuego id="vg048"><Titulo>Far Cry 3</Titulo><Año>2012</Año><Compañía>Ubisoft</Compañía><Consola>: PS3, Xbox 360</Consola><Puntuación>9.0</Puntuación></Videojuego><Videojuego id="vg049"><Titulo>Skyrim</Titulo><Año>2011</Año><Compañía>Bethesda Game Studios</Compañía><Consola>: PS3, Xbox 360</Consola><Puntuación>9.5</Puntuación></Videojuego><Videojuego id="vg050"><Titulo>DOOM (2016)</Titulo><Año>2016</Año><Compañía>id Software</Compañía><Consola>: PS4, Xbox One</Consola><Puntuación>8.9</Puntuación></Videojuego><Videojuego id="vg051"><Titulo>Rocket League</Titulo><Año>2015</Año><Compañía>Psyonix</Compañía><Consola>: PS4, Xbox One</Consola><Puntuación>9.0</Puntuación></Videojuego><Videojuego id="vg052"><Titulo>Among Us</Titulo><Año>2018</Año><Compañía>Innersloth</Compañía><Consola>: PC</Consola><Puntuación>8.5</Puntuación></Videojuego><Videojuego id="vg053"><Titulo>Valorant</Titulo><Año>2020</Año><Compañía>Riot Games</Compañía><Consola>: PC</Consola><Puntuación>8.9</Puntuación></Videojuego><Videojuego id="vg054"><Titulo>League of Legends</Titulo><Año>2009</Año><Compañía>Riot Games</Compañía><Consola>: PC</Consola><Puntuación>9.0</Puntuación></Videojuego><Videojuego id="vg055"><Titulo>Counter-Strike: Global Offensive</Titulo><Año>2012</Año><Compañía>Valve</Compañía><Consola>: PC</Consola><Puntuación>8.8</Puntuación></Videojuego><Videojuego id="vg056"><Titulo>World of Warcraft</Titulo><Año>2004</Año><Compañía>Blizzard Entertainment</Compañía><Consola>: PC</Consola><Puntuación>9.1</Puntuación></Videojuego><Videojuego id="vg057"><Titulo>StarCraft II</Titulo><Año>2010</Año><Compañía>Blizzard Entertainment</Compañía><Consola>: PC</Consola><Puntuación>9.0</Puntuación></Videojuego><Videojuego id="vg058"><Titulo>Diablo III</Titulo><Año>2012</Año><Compañía>Blizzard Entertainment</Compañía><Consola>: PS3, Xbox 360</Consola><Puntuación>8.7</Puntuación></Videojuego><Videojuego id="vg059"><Titulo>Overwatch</Titulo><Año>2016</Año><Compañía>Blizzard Entertainment</Compañía><Consola>: PS4, Xbox One</Consola><Puntuación>9.0</Puntuación></Videojuego><Videojuego id="vg060"><Titulo>Expedition 33</Titulo><Año>2025</Año><Compañía>Sandfall Interactive</Compañía><Consola>: PC</Consola><Puntuación>9.9</Puntuación></Videojuego><Videojuego id="vg061"><Titulo>Red Dead Redemption 2</Titulo><Año>2018</Año><Compañía>Rockstar Games</Compañía><Consola>: PS4, Xbox One</Consola><Puntuación>9.8</Puntuación></Videojuego><Videojuego id="vg062"><Titulo>Grand Theft Auto V</Titulo><Año>2013</Año><Compañía>Rockstar Games</Compañía><Consola>: PS4, Xbox One</Consola><Puntuación>9.7</Puntuación></Videojuego><Videojuego id="vg063"><Titulo>Hogwarts Legacy</Titulo><Año>2023</Año><Compañía>Portkey Games</Compañía><Consola>: PS5, Xbox Series X/S</Consola><Puntuación>8.7</Puntuación></Videojuego><Videojuego id="vg064"><Titulo>TrackMania Turbo</Titulo><Año>2016</Año><Compañía>Nadeo</Compañía><Consola>: PS4, Xbox One</Consola><Puntuación>8.0</Puntuación></Videojuego><Videojuego id="vg065"><Titulo>Star Wars Jedi: Survivor</Titulo><Año>2023</Año><Compañía>Respawn Entertainment</Compañía><Consola>: PS5, Xbox Series X/S</Consola><Puntuación>8.5</Puntuación></Videojuego><Videojuego id="vg066"><Titulo>Dark Souls Trilogy</Titulo><Año>2020</Año><Compañía>FromSoftware</Compañía><Consola>: PS4, Xbox One</Consola><Puntuación>9.0</Puntuación></Videojuego><Videojuego id="vg067"><Titulo>Dragon Ball FighterZ</Titulo><Año>2018</Año><Compañía>Arc System Works</Compañía><Consola>: PS4, Xbox One</Consola><Puntuación>8.5</Puntuación></Videojuego><Videojuego id="vg068"><Titulo>FIFA 23</Titulo><Año>2022</Año><Compañía>EA Sports</Compañía><Consola>: PS4, Xbox One</Consola><Puntuación>8.0</Puntuación></Videojuego><Videojuego id="vg069"><Titulo>Doom Eternal</Titulo><Año>2020</Año><Compañía>id Software</Compañía><Consola>: PS4, Xbox One</Consola><Puntuación>9.0</Puntuación></Videojuego><Videojuego id="vg070"><Titulo>Two Point Museum</Titulo><Año>2025</Año><Compañía>Two Point Studios</Compañía><Consola>: PC</Consola><Puntuación>8.2</Puntuación></Videojuego><Videojuego id="vg071"><Titulo>Pokémon Leyendas ZA</Titulo><Año>2025</Año><Compañía>Nintendo</Compañía><Consola>: Switch, Switch 2</Consola><Puntuación>7.5</Puntuación></Videojuego><Videojuego id="vg072"><Titulo>Minecraft</Titulo><Año>2011</Año><Compañía>Mojang</Compañía><Consola>: PC</Consola><Puntuación>9.0</Puntuación></Videojuego><Videojuego id="vg073"><Titulo>EA Sports FC 25</Titulo><Año>2024</Año><Compañía>EA Sports</Compañía><Consola>: PS4, Xbox One</Consola><Puntuación>8.5</Puntuación></Videojuego><Videojuego id="vg074"><Titulo>Sid Meier's Civilization VII</Titulo><Año>2025</Año><Compañía>Firaxis Games</Compañía><Consola>: PC</Consola><Puntuación>9.0</Puntuación></Videojuego><Videojuego id="vg075"><Titulo>Farming Simulator 25</Titulo><Año>2025</Año><Compañía>Giants Software</Compañía><Consola>: PC</Consola><Puntuación>8.0</Puntuación></Videojuego><Videojuego id="vg076"><Titulo>EA Sports FC 24</Titulo><Año>2023</Año><Compañía>EA Sports</Compañía><Consola>: PS4, Xbox One</Consola><Puntuación>8.2</Puntuación></Videojuego><Videojuego id="vg077"><Titulo>Prince of Persia</Titulo><Año>2025</Año><Compañía>Ubisoft</Compañía><Consola>: PC</Consola><Puntuación>7.8</Puntuación></Videojuego><Videojuego id="vg078"><Titulo>Like a Dragon: Pirate Yakuza in Hawaii</Titulo><Año>2025</Año><Compañía>Sega</Compañía><Consola>: PC</Consola><Puntuación>8.0</Puntuación></Videojuego><Videojuego id="vg079"><Titulo>Prince of Persia: Warrior Within</Titulo><Año>2025</Año><Compañía>Ubisoft</Compañía><Consola>: PC</Consola><Puntuación>8.1</Puntuación></Videojuego><Videojuego id="vg080"><Titulo>Sand Land</Titulo><Año>2025</Año><Compañía>Bandai Namco</Compañía><Consola>: PC</Consola><Puntuación>7.9</Puntuación></Videojuego><Videojuego id="vg081"><Titulo>RoboCop: Rogue City</Titulo><Año>2025</Año><Compañía>Daedalic Entertainment</Compañía><Consola>: PC</Consola><Puntuación>8.3</Puntuación></Videojuego><Videojuego id="vg082"><Titulo>Star Wars Jedi: Survivor</Titulo><Año>2023</Año><Compañía>Respawn Entertainment</Compañía><Consola>: PS5, Xbox Series X/S</Consola><Puntuación>8.5</Puntuación></Videojuego><Videojuego id="vg083"><Titulo>Dark Souls Trilogy</Titulo><Año>2020</Año><Compañía>FromSoftware</Compañía><Consola>: PS4, Xbox One</Consola><Puntuación>9.0</Puntuación></Videojuego><Videojuego id="vg084"><Titulo>Dragon Ball FighterZ</Titulo><Año>2018</Año><Compañía>Arc System Works</Compañía><Consola>: PS4, Xbox One</Consola><Puntuación>8.5</Puntuación></Videojuego><Videojuego id="vg085"><Titulo>Kingdom Hearts III</Titulo><Año>2019</Año><Compañía>Square Enix</Compañía><Consola>: PC, PS4, Xbox One</Consola><Puntuación>9.7</Puntuación></Videojuego><Videojuego id="vg086"><Titulo>Doom Eternal</Titulo><Año>2020</Año><Compañía>id Software</Compañía><Consola>: PS4, Xbox One</Consola><Puntuación>9.0</Puntuación></Videojuego><Videojuego id="vg087"><Titulo>Two Point Museum</Titulo><Año>2025</Año><Compañía>Two Point Studios</Compañía><Consola>: PC</Consola><Puntuación>8.2</Puntuación></Videojuego><Videojuego id="vg088"><Titulo>Remember me</Titulo><Año>2025</Año><Compañía>Capcom</Compañía><Consola>: PC, Xbox360, PS3</Consola><Puntuación>9.8</Puntuación></Videojuego><Videojuego id="vg089"><Titulo>Minecraft</Titulo><Año>2011</Año><Compañía>Mojang</Compañía><Consola>: PC</Consola><Puntuación>9.0</Puntuación></Videojuego><Videojuego id="vg090"><Titulo>EA Sports FC 25</Titulo><Año>2024</Año><Compañía>EA Sports</Compañía><Consola>: PS4, Xbox One</Consola><Puntuación>8.5</Puntuación></Videojuego><Videojuego id="vg091"><Titulo>Kingdom Come: Deliverance II</Titulo><Año>2025</Año><Compañía>Warhorse Studios</Compañía><Consola>: PS5, Xbox Series X/S, PC</Consola><Puntuación>8.8</Puntuación></Videojuego><Videojuego id="vg092"><Titulo>Donkey Kong Bananza</Titulo><Año>2025</Año><Compañía>Nintendo</Compañía><Consola>: Switch 2</Consola><Puntuación>9.6</Puntuación></Videojuego><Videojuego id="vg093"><Titulo>Alan Wake Remastered</Titulo><Año>2021</Año><Compañía>Remedy Entertainment</Compañía><Consola>: PS5, Xbox Series X/S, PC</Consola><Puntuación>8.9</Puntuación></Videojuego><Videojuego id="vg094"><Titulo>Split Fiction</Titulo><Año>2025</Año><Compañía>Kepler Interactive</Compañía><Consola>: PS5, Xbox Series X/S, PC, Switch 2</Consola><Puntuación>9.1</Puntuación></Videojuego><Videojuego id="vg095"><Titulo>Death Stranding 2: On the Beach</Titulo><Año>2025</Año><Compañía>Kojima Productions</Compañía><Consola>: PS5, PC</Consola><Puntuación>9.0</Puntuación></Videojuego><Videojuego id="vg096"><Titulo>Despelote</Titulo><Año>2025</Año><Compañía>Unknown</Compañía><Consola>: PC</Consola><Puntuación>8.9</Puntuación></Videojuego><Videojuego id="vg097"><Titulo>The Talos Principle: Reawakened</Titulo><Año>2025</Año><Compañía>Croteam</Compañía><Consola>: PS5, Xbox Series X/S, PC</Consola><Puntuación>8.9</Puntuación></Videojuego><Videojuego id="vg098"><Titulo>Monster Hunter Wilds</Titulo><Año>2025</Año><Compañía>Capcom</Compañía><Consola>: PS5, Xbox Series X/S, PC</Consola><Puntuación>8.8</Puntuación></Videojuego><Videojuego id="vg099"><Titulo>Kingdom Come: Deliverance II</Titulo><Año>2025</Año><Compañía>Warhorse Studios</Compañía><Consola>: PS5, Xbox Series X/S, PC</Consola><Puntuación>8.8</Puntuación></Videojuego><Videojuego id="vg100"><Titulo>Sid Meier's Civilization VII</Titulo><Año>2025</Año><Compañía>Firaxis Games</Compañía><Consola>: PS4, PS5, Xbox One, Xbox Series X/S, PC, Switch 2</Consola><Puntuación>9.0</Puntuación></Videojuego></Videojuegos></Catalogo_juegos.xml>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Catalogo_juegos>
+    <videojuegos>
+        <videojuego id="vg001">
+            <titulo>Super Mario Bros.</titulo>
+            <año>1985</año>
+            <compañía>Nintendo</compañía>
+            <ronsola>: NES</ronsola>
+            <runtuación>9.8</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg002">
+            <titulo>The Legend of Zelda: Ocarina of Time</titulo>
+            <año>1998</año>
+            <compañía>Nintendo</compañía>
+            <ronsola>: N64</ronsola>
+            <runtuación>9.6</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg003">
+            <titulo>Half-Life 2</titulo>
+            <año>2004</año>
+            <compañía>Valve</compañía>
+            <ronsola>: PC</ronsola>
+            <runtuación>9.5</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg004">
+            <titulo>Grand Theft Auto V</titulo>
+            <año>2013</año>
+            <compañía>Rockstar Games</compañía>
+            <ronsola>: PS3, Xbox 360</ronsola>
+            <runtuación>9.6</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg005">
+            <titulo>Red Dead Redemption 2</titulo>
+            <año>2018</año>
+            <compañía>Rockstar Games</compañía>
+            <ronsola>: PS4, Xbox One</ronsola>
+            <runtuación>9.8</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg006">
+            <titulo>The Witcher 3: Wild Hunt</titulo>
+            <año>2015</año>
+            <compañía>CD Projekt</compañía>
+            <ronsola>: PS4, Xbox One</ronsola>
+            <runtuación>9.7</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg007">
+            <titulo>Final Fantasy VII</titulo>
+            <año>1997</año>
+            <compañía>Square Enix</compañía>
+            <ronsola>: PS1</ronsola>
+            <runtuación>9.5</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg008">
+            <titulo>Portal 2</titulo>
+            <año>2011</año>
+            <compañía>Valve</compañía>
+            <ronsola>: PC</ronsola>
+            <runtuación>9.7</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg009">
+            <titulo>Overwatch</titulo>
+            <año>2016</año>
+            <compañía>Blizzard Entertainment</compañía>
+            <ronsola>: PS4, Xbox One</ronsola>
+            <runtuación>9.0</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg010">
+            <titulo>Dark Souls</titulo>
+            <año>2011</año>
+            <compañía>FromSoftware</compañía>
+            <ronsola>: PS3, Xbox 360</ronsola>
+            <runtuación>9.5</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg011">
+            <titulo>Hollow Knight</titulo>
+            <año>2017</año>
+            <compañía>Team Cherry</compañía>
+            <ronsola>: PC</ronsola>
+            <runtuación>9.4</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg012">
+            <titulo>Celeste</titulo>
+            <año>2018</año>
+            <compañía>Maddy Makes Games</compañía>
+            <ronsola>: PS4, Xbox One</ronsola>
+            <runtuación>9.6</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg013">
+            <titulo>Bloodborne</titulo>
+            <año>2015</año>
+            <compañía>FromSoftware</compañía>
+            <ronsola>: PS4</ronsola>
+            <runtuación>9.7</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg014">
+            <titulo>God of War (2018)</titulo>
+            <año>2018</año>
+            <compañía>Sony Santa Monica</compañía>
+            <ronsola>: PS4</ronsola>
+            <runtuación>9.8</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg015">
+            <titulo>Persona 5</titulo>
+            <año>2016</año>
+            <compañía>Atlus</compañía>
+            <ronsola>: PS3, PS4</ronsola>
+            <runtuación>9.5</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg016">
+            <titulo>Spelunky</titulo>
+            <año>2008</año>
+            <compañía>Spelunky Team</compañía>
+            <ronsola>: PC</ronsola>
+            <runtuación>9.0</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg017">
+            <titulo>Stardew Valley</titulo>
+            <año>2016</año>
+            <compañía>ConcernedApe</compañía>
+            <ronsola>: PC</ronsola>
+            <runtuación>9.3</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg018">
+            <titulo>Undertale</titulo>
+            <año>2015</año>
+            <compañía>Tofu</compañía>
+            <ronsola>: PC</ronsola>
+            <runtuación>9.7</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg019">
+            <titulo>Journey</titulo>
+            <año>2012</año>
+            <compañía>Thatgamecompany</compañía>
+            <ronsola>: PS3</ronsola>
+            <runtuación>9.3</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg020">
+            <titulo>Metal Gear Solid</titulo>
+            <año>1998</año>
+            <compañía>Konami</compañía>
+            <ronsola>: PS1</ronsola>
+            <runtuación>9.8</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg021">
+            <titulo>Super Mario 64</titulo>
+            <año>1996</año>
+            <compañía>Nintendo</compañía>
+            <ronsola>: N64</ronsola>
+            <runtuación>9.6</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg022">
+            <titulo>Halo: Combat Evolved</titulo>
+            <año>2001</año>
+            <compañía>Bungie</compañía>
+            <ronsola>: Xbox</ronsola>
+            <runtuación>9.5</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg023">
+            <titulo>BioShock</titulo>
+            <año>2007</año>
+            <compañía>2K Games</compañía>
+            <ronsola>: PC</ronsola>
+            <runtuación>9.6</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg024">
+            <titulo>Assassin's Creed II</titulo>
+            <año>2009</año>
+            <compañía>Ubisoft</compañía>
+            <ronsola>: PS3, Xbox 360</ronsola>
+            <runtuación>9.5</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg025">
+            <titulo>Mass Effect 2</titulo>
+            <año>2010</año>
+            <compañía>BioWare</compañía>
+            <ronsola>: Xbox 360, PC</ronsola>
+            <runtuación>9.7</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg026">
+            <titulo>Rocket League</titulo>
+            <año>2015</año>
+            <compañía>Psyonix</compañía>
+            <ronsola>: PS4, Xbox One</ronsola>
+            <runtuación>9.0</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg027">
+            <titulo>Celeste</titulo>
+            <año>2018</año>
+            <compañía>Maddy Makes Games</compañía>
+            <ronsola>: PS4, Xbox One</ronsola>
+            <runtuación>9.6</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg028">
+            <titulo>Hollow Knight</titulo>
+            <año>2017</año>
+            <compañía>Team Cherry</compañía>
+            <ronsola>: PC</ronsola>
+            <runtuación>9.4</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg029">
+            <titulo>Bloodborne</titulo>
+            <año>2015</año>
+            <compañía>FromSoftware</compañía>
+            <ronsola>: PS4</ronsola>
+            <runtuación>9.7</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg030">
+            <titulo>God of War (2018)</titulo>
+            <año>2018</año>
+            <compañía>Sony Santa Monica</compañía>
+            <ronsola>: PS4</ronsola>
+            <runtuación>9.8</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg031">
+            <titulo>The Last of Us</titulo>
+            <año>2013</año>
+            <compañía>Naughty Dog</compañía>
+            <ronsola>: PS3</ronsola>
+            <runtuación>9.7</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg032">
+            <titulo>Uncharted 2: El reino de los ladrones</titulo>
+            <año>2009</año>
+            <compañía>Naughty Dog</compañía>
+            <ronsola>: PS3</ronsola>
+            <runtuación>9.6</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg033">
+            <titulo>Red Dead Redemption</titulo>
+            <año>2010</año>
+            <compañía>Rockstar Games</compañía>
+            <ronsola>: PS3, Xbox 360</ronsola>
+            <runtuación>9.8</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg034">
+            <titulo>BioShock Infinite</titulo>
+            <año>2013</año>
+            <compañía>2K Games</compañía>
+            <ronsola>: PS3, Xbox 360</ronsola>
+            <runtuación>9.3</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg035">
+            <titulo>Mass Effect</titulo>
+            <año>2007</año>
+            <compañía>BioWare</compañía>
+            <ronsola>: Xbox 360, PC</ronsola>
+            <runtuación>9.5</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg036">
+            <titulo>Halo 3</titulo>
+            <año>2007</año>
+            <compañía>Bungie</compañía>
+            <ronsola>: Xbox 360</ronsola>
+            <runtuación>9.6</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg037">
+            <titulo>Super Mario Odyssey</titulo>
+            <año>2017</año>
+            <compañía>Nintendo</compañía>
+            <ronsola>: Switch</ronsola>
+            <runtuación>9.7</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg038">
+            <titulo>Persona 5 Royal</titulo>
+            <año>2019</año>
+            <compañía>Atlus</compañía>
+            <ronsola>: PS4</ronsola>
+            <runtuación>9.8</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg039">
+            <titulo>Dark Souls III</titulo>
+            <año>2016</año>
+            <compañía>FromSoftware</compañía>
+            <ronsola>: PS4, Xbox One</ronsola>
+            <runtuación>9.5</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg040">
+            <titulo>Bloodborne</titulo>
+            <año>2015</año>
+            <compañía>FromSoftware</compañía>
+            <ronsola>: PS4</ronsola>
+            <runtuación>9.7</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg041">
+            <titulo>God of War (2018)</titulo>
+            <año>2018</año>
+            <compañía>Sony Santa Monica</compañía>
+            <ronsola>: PS4</ronsola>
+            <runtuación>9.8</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg042">
+            <titulo>Spider-Man (2018)</titulo>
+            <año>2018</año>
+            <compañía>Insomniac Games</compañía>
+            <ronsola>: PS4</ronsola>
+            <runtuación>9.3</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg043">
+            <titulo>Horizon Zero Dawn</titulo>
+            <año>2017</año>
+            <compañía>Guerrilla Games</compañía>
+            <ronsola>: PS4</ronsola>
+            <runtuación>9.0</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg044">
+            <titulo>Ghost of Tsushima</titulo>
+            <año>2020</año>
+            <compañía>Sucker Punch Productions</compañía>
+            <ronsola>: PS4</ronsola>
+            <runtuación>9.7</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg045">
+            <titulo>Cyberpunk 2077</titulo>
+            <año>2020</año>
+            <compañía>CD Projekt</compañía>
+            <ronsola>: PS4, Xbox One</ronsola>
+            <runtuación>9.9</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg046">
+            <titulo>Final Fantasy XV</titulo>
+            <año>2016</año>
+            <compañía>Square Enix</compañía>
+            <ronsola>: PS4, Xbox One</ronsola>
+            <runtuación>8.7</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg047">
+            <titulo>Assassin's Creed IV: Black Flag</titulo>
+            <año>2013</año>
+            <compañía>Ubisoft</compañía>
+            <ronsola>: PS3, Xbox 360</ronsola>
+            <runtuación>8.9</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg048">
+            <titulo>Far Cry 3</titulo>
+            <año>2012</año>
+            <compañía>Ubisoft</compañía>
+            <ronsola>: PS3, Xbox 360</ronsola>
+            <runtuación>9.0</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg049">
+            <titulo>Skyrim</titulo>
+            <año>2011</año>
+            <compañía>Bethesda Game Studios</compañía>
+            <ronsola>: PS3, Xbox 360</ronsola>
+            <runtuación>9.5</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg050">
+            <titulo>DOOM (2016)</titulo>
+            <año>2016</año>
+            <compañía>id Software</compañía>
+            <ronsola>: PS4, Xbox One</ronsola>
+            <runtuación>8.9</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg051">
+            <titulo>Rocket League</titulo>
+            <año>2015</año>
+            <compañía>Psyonix</compañía>
+            <ronsola>: PS4, Xbox One</ronsola>
+            <runtuación>9.0</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg052">
+            <titulo>Among Us</titulo>
+            <año>2018</año>
+            <compañía>Innersloth</compañía>
+            <ronsola>: PC</ronsola>
+            <runtuación>8.5</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg053">
+            <titulo>Valorant</titulo>
+            <año>2020</año>
+            <compañía>Riot Games</compañía>
+            <ronsola>: PC</ronsola>
+            <runtuación>8.9</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg054">
+            <titulo>League of Legends</titulo>
+            <año>2009</año>
+            <compañía>Riot Games</compañía>
+            <ronsola>: PC</ronsola>
+            <runtuación>9.0</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg055">
+            <titulo>Counter-Strike: Global Offensive</titulo>
+            <año>2012</año>
+            <compañía>Valve</compañía>
+            <ronsola>: PC</ronsola>
+            <runtuación>8.8</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg056">
+            <titulo>World of Warcraft</titulo>
+            <año>2004</año>
+            <compañía>Blizzard Entertainment</compañía>
+            <ronsola>: PC</ronsola>
+            <runtuación>9.1</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg057">
+            <titulo>StarCraft II</titulo>
+            <año>2010</año>
+            <compañía>Blizzard Entertainment</compañía>
+            <ronsola>: PC</ronsola>
+            <runtuación>9.0</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg058">
+            <titulo>Diablo III</titulo>
+            <año>2012</año>
+            <compañía>Blizzard Entertainment</compañía>
+            <ronsola>: PS3, Xbox 360</ronsola>
+            <runtuación>8.7</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg059">
+            <titulo>Overwatch</titulo>
+            <año>2016</año>
+            <compañía>Blizzard Entertainment</compañía>
+            <ronsola>: PS4, Xbox One</ronsola>
+            <runtuación>9.0</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg060">
+            <titulo>Expedition 33</titulo>
+            <año>2025</año>
+            <compañía>Sandfall Interactive</compañía>
+            <ronsola>: PC</ronsola>
+            <runtuación>9.9</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg061">
+            <titulo>Red Dead Redemption 2</titulo>
+            <año>2018</año>
+            <compañía>Rockstar Games</compañía>
+            <ronsola>: PS4, Xbox One</ronsola>
+            <runtuación>9.8</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg062">
+            <titulo>Grand Theft Auto V</titulo>
+            <año>2013</año>
+            <compañía>Rockstar Games</compañía>
+            <ronsola>: PS4, Xbox One</ronsola>
+            <runtuación>9.7</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg063">
+            <titulo>Hogwarts Legacy</titulo>
+            <año>2023</año>
+            <compañía>Portkey Games</compañía>
+            <ronsola>: PS5, Xbox Series X/S</ronsola>
+            <runtuación>8.7</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg064">
+            <titulo>TrackMania Turbo</titulo>
+            <año>2016</año>
+            <compañía>Nadeo</compañía>
+            <ronsola>: PS4, Xbox One</ronsola>
+            <runtuación>8.0</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg065">
+            <titulo>Star Wars Jedi: Survivor</titulo>
+            <año>2023</año>
+            <compañía>Respawn Entertainment</compañía>
+            <ronsola>: PS5, Xbox Series X/S</ronsola>
+            <runtuación>8.5</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg066">
+            <titulo>Dark Souls Trilogy</titulo>
+            <año>2020</año>
+            <compañía>FromSoftware</compañía>
+            <ronsola>: PS4, Xbox One</ronsola>
+            <runtuación>9.0</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg067">
+            <titulo>Dragon Ball FighterZ</titulo>
+            <año>2018</año>
+            <compañía>Arc System Works</compañía>
+            <ronsola>: PS4, Xbox One</ronsola>
+            <runtuación>8.5</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg068">
+            <titulo>FIFA 23</titulo>
+            <año>2022</año>
+            <compañía>EA Sports</compañía>
+            <ronsola>: PS4, Xbox One</ronsola>
+            <runtuación>8.0</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg069">
+            <titulo>Doom Eternal</titulo>
+            <año>2020</año>
+            <compañía>id Software</compañía>
+            <ronsola>: PS4, Xbox One</ronsola>
+            <runtuación>9.0</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg070">
+            <titulo>Two Point Museum</titulo>
+            <año>2025</año>
+            <compañía>Two Point Studios</compañía>
+            <ronsola>: PC</ronsola>
+            <runtuación>8.2</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg071">
+            <titulo>Pokémon Leyendas ZA</titulo>
+            <año>2025</año>
+            <compañía>Nintendo</compañía>
+            <ronsola>: Switch, Switch 2</ronsola>
+            <runtuación>7.5</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg072">
+            <titulo>Minecraft</titulo>
+            <año>2011</año>
+            <compañía>Mojang</compañía>
+            <ronsola>: PC</ronsola>
+            <runtuación>9.0</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg073">
+            <titulo>EA Sports FC 25</titulo>
+            <año>2024</año>
+            <compañía>EA Sports</compañía>
+            <ronsola>: PS4, Xbox One</ronsola>
+            <runtuación>8.5</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg074">
+            <titulo>Sid Meier's Civilization VII</titulo>
+            <año>2025</año>
+            <compañía>Firaxis Games</compañía>
+            <ronsola>: PC</ronsola>
+            <runtuación>9.0</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg075">
+            <titulo>Farming Simulator 25</titulo>
+            <año>2025</año>
+            <compañía>Giants Software</compañía>
+            <ronsola>: PC</ronsola>
+            <runtuación>8.0</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg076">
+            <titulo>EA Sports FC 24</titulo>
+            <año>2023</año>
+            <compañía>EA Sports</compañía>
+            <ronsola>: PS4, Xbox One</ronsola>
+            <runtuación>8.2</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg077">
+            <titulo>Prince of Persia</titulo>
+            <año>2025</año>
+            <compañía>Ubisoft</compañía>
+            <ronsola>: PC</ronsola>
+            <runtuación>7.8</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg078">
+            <titulo>Like a Dragon: Pirate Yakuza in Hawaii</titulo>
+            <año>2025</año>
+            <compañía>Sega</compañía>
+            <ronsola>: PC</ronsola>
+            <runtuación>8.0</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg079">
+            <titulo>Prince of Persia: Warrior Within</titulo>
+            <año>2025</año>
+            <compañía>Ubisoft</compañía>
+            <ronsola>: PC</ronsola>
+            <runtuación>8.1</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg080">
+            <titulo>Sand Land</titulo>
+            <año>2025</año>
+            <compañía>Bandai Namco</compañía>
+            <ronsola>: PC</ronsola>
+            <runtuación>7.9</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg081">
+            <titulo>RoboCop: Rogue City</titulo>
+            <año>2025</año>
+            <compañía>Daedalic Entertainment</compañía>
+            <ronsola>: PC</ronsola>
+            <runtuación>8.3</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg082">
+            <titulo>Star Wars Jedi: Survivor</titulo>
+            <año>2023</año>
+            <compañía>Respawn Entertainment</compañía>
+            <ronsola>: PS5, Xbox Series X/S</ronsola>
+            <runtuación>8.5</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg083">
+            <titulo>Dark Souls Trilogy</titulo>
+            <año>2020</año>
+            <compañía>FromSoftware</compañía>
+            <ronsola>: PS4, Xbox One</ronsola>
+            <runtuación>9.0</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg084">
+            <titulo>Dragon Ball FighterZ</titulo>
+            <año>2018</año>
+            <compañía>Arc System Works</compañía>
+            <ronsola>: PS4, Xbox One</ronsola>
+            <runtuación>8.5</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg085">
+            <titulo>Kingdom Hearts III</titulo>
+            <año>2019</año>
+            <compañía>Square Enix</compañía>
+            <ronsola>: PC, PS4, Xbox One</ronsola>
+            <runtuación>9.7</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg086">
+            <titulo>Doom Eternal</titulo>
+            <año>2020</año>
+            <compañía>id Software</compañía>
+            <ronsola>: PS4, Xbox One</ronsola>
+            <runtuación>9.0</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg087">
+            <titulo>Two Point Museum</titulo>
+            <año>2025</año>
+            <compañía>Two Point Studios</compañía>
+            <ronsola>: PC</ronsola>
+            <runtuación>8.2</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg088">
+            <titulo>Remember me</titulo>
+            <año>2025</año>
+            <compañía>Capcom</compañía>
+            <ronsola>: PC, Xbox360, PS3</ronsola>
+            <runtuación>9.8</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg089">
+            <titulo>Minecraft</titulo>
+            <año>2011</año>
+            <compañía>Mojang</compañía>
+            <ronsola>: PC</ronsola>
+            <runtuación>9.0</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg090">
+            <titulo>EA Sports FC 25</titulo>
+            <año>2024</año>
+            <compañía>EA Sports</compañía>
+            <ronsola>: PS4, Xbox One</ronsola>
+            <runtuación>8.5</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg091">
+            <titulo>Kingdom Come: Deliverance II</titulo>
+            <año>2025</año>
+            <compañía>Warhorse Studios</compañía>
+            <ronsola>: PS5, Xbox Series X/S, PC</ronsola>
+            <runtuación>8.8</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg092">
+            <titulo>Donkey Kong Bananza</titulo>
+            <año>2025</año>
+            <compañía>Nintendo</compañía>
+            <ronsola>: Switch 2</ronsola>
+            <runtuación>9.6</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg093">
+            <titulo>Alan Wake Remastered</titulo>
+            <año>2021</año>
+            <compañía>Remedy Entertainment</compañía>
+            <ronsola>: PS5, Xbox Series X/S, PC</ronsola>
+            <runtuación>8.9</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg094">
+            <titulo>Split Fiction</titulo>
+            <año>2025</año>
+            <compañía>Kepler Interactive</compañía>
+            <ronsola>: PS5, Xbox Series X/S, PC, Switch 2</ronsola>
+            <runtuación>9.1</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg095">
+            <titulo>Death Stranding 2: On the Beach</titulo>
+            <año>2025</año>
+            <compañía>Kojima Productions</compañía>
+            <ronsola>: PS5, PC</ronsola>
+            <runtuación>9.0</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg096">
+            <titulo>Despelote</titulo>
+            <año>2025</año>
+            <compañía>Unknown</compañía>
+            <ronsola>: PC</ronsola>
+            <runtuación>8.9</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg097">
+            <titulo>The Talos Principle: Reawakened</titulo>
+            <año>2025</año>
+            <compañía>Croteam</compañía>
+            <ronsola>: PS5, Xbox Series X/S, PC</ronsola>
+            <runtuación>8.9</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg098">
+            <titulo>Monster Hunter Wilds</titulo>
+            <año>2025</año>
+            <compañía>Capcom</compañía>
+            <ronsola>: PS5, Xbox Series X/S, PC</ronsola>
+            <runtuación>8.8</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg099">
+            <titulo>Kingdom Come: Deliverance II</titulo>
+            <año>2025</año>
+            <compañía>Warhorse Studios</compañía>
+            <ronsola>: PS5, Xbox Series X/S, PC</ronsola>
+            <runtuación>8.8</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+        <videojuego id="vg100">
+            <titulo>Sid Meier's Civilization VII</titulo>
+            <año>2025</año>
+            <compañía>Firaxis Games</compañía>
+            <ronsola>: PS4, PS5, Xbox One, Xbox Series X/S, PC, Switch 2</ronsola>
+            <runtuación>9.0</runtuación>
+            <recomendacion>S</recomendacion>
+        </videojuego>
+    </videojuegos>
+</Catalogo_juegos>
