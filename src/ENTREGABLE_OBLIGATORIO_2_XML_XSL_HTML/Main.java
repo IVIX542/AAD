@@ -30,13 +30,13 @@ import org.w3c.dom.Text;
 
 //SAX
 import javax.xml.parsers.SAXParserFactory;
+import javax.xml.parsers.SAXParser;
 import org.xml.sax.helpers.DefaultHandler;
 import org.xml.sax.Attributes;
 
 //Excepciones
 import java.io.IOException;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.parsers.SAXParser;
 import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 import org.xml.sax.SAXException;
@@ -238,7 +238,10 @@ public class Main {
                 @Override
                 public void startElement(String uri, String localName, String qName, Attributes attributes)throws SAXException {
 
-                    if (qName.equalsIgnoreCase("titulo")) {
+                    if (qName.equalsIgnoreCase("videojuego")) {
+                        String id = attributes.getValue("id");
+                        System.out.println("\nID: " + id);
+                    } else if (qName.equalsIgnoreCase("titulo")) {
                         bTitulo = true;
                     } else if (qName.equalsIgnoreCase("anio")) {
                         bAnio = true;
@@ -264,7 +267,7 @@ public class Main {
                 @Override
                 public void characters(char[] ch, int start, int length)throws SAXException {
                     if (bTitulo) {
-                        System.out.println("\nTítulo: " + new String(ch, start, length));
+                        System.out.println("Título: " + new String(ch, start, length));
                         bTitulo = false;
                     } else if (bAnio) {
                         System.out.println("Año: " + new String(ch, start, length));
