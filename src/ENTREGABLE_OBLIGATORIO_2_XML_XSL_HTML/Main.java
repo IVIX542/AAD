@@ -1,8 +1,7 @@
 /**
  * Clase Main que contiene el método main para la ejecución del programa.
  * @author Iván López Benítez
- * @version 1.1
- * @see Juego
+ * @version 1.2
  * Fecha: 26/10/2025
 */
 
@@ -15,7 +14,6 @@ import java.util.ArrayList;
 //XML
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.Source;
 import javax.xml.transform.OutputKeys;
@@ -30,12 +28,23 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Text;
 
+//SAX
+import javax.xml.parsers.SAXParserFactory;
+import org.xml.sax.helpers.DefaultHandler;
+import org.xml.sax.Attributes;
+
 //Excepciones
 import java.io.IOException;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.SAXParser;
 import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
+import org.xml.sax.SAXException;
+
+
 
 public class Main {
+    //ArrayList global, para usarlo en todos los métodos de la clase Main
     public static ArrayList<Juego> juegos = new ArrayList<>();
 
     /**
@@ -50,6 +59,7 @@ public class Main {
         //Llamadas a métodos
         extraerDatos(txt);
         crearXML(xml);
+        leerXML(xml);
 
     }
 
@@ -57,6 +67,7 @@ public class Main {
      * Método para extraer los datos del fichero de texto y mostrarlos por consola.
      * @since 1.0
      * @param txt File fichero de texto a leer
+     * @exception IOException Si hay un error al leer el fichero.
      */
     public static void extraerDatos(File txt){
         try {
@@ -77,7 +88,7 @@ public class Main {
                 // Compañía
                 String compania = linea.substring((linea.indexOf("Compañía") + 10), (linea.indexOf("Consola"))).trim();
                 //Consola
-                String consola = linea.substring((linea.indexOf("Consola") + 7), (linea.indexOf("Puntuación"))).trim();
+                String consola = linea.substring((linea.indexOf("Consola") + 9), (linea.indexOf("Puntuación"))).trim();
                 //Puntuación
                 String puntuacion = linea.substring(linea.indexOf("Puntuación") + 12, linea.length()).trim();
 
@@ -98,13 +109,6 @@ public class Main {
                 //Añadir el juego al arraylist
                 juegos.add(juego);
 
-                System.out.println("\nJuego " + juego.getId() + ":");
-                System.out.println("Título: " + juego.getTitulo());
-                System.out.println("Año: " + juego.getAnio());
-                System.out.println("Compañía: " + juego.getCompania());
-                System.out.println("Consola: " + juego.getConsola());
-                System.out.println("Puntuacion: " + juego.getPuntuacion());
-                System.out.println("Recomendacion: " + juego.getRecomendacion());
             }
             br.close();
             
@@ -117,6 +121,9 @@ public class Main {
      * Método para crear un XML a partit de los juegos leídos.
      * @since 1.1
      * @param xml File fichero XML a crear
+     * @exception ParserConfigurationException Si hay un error en la configuración del parser.
+     * @exception TransformerConfigurationException Si hay un error en la configuración del transformador.
+     * @exception TransformerException Si hay un error al transformar el documento XML.
      */
     public static void crearXML(File xml){
         try {
@@ -146,22 +153,22 @@ public class Main {
                 titulo.appendChild(tetxTitulo);
                 videojuego.appendChild(titulo);
                 //Año
-                Element anio = documento.createElement("año");
+                Element anio = documento.createElement("anio");
                 Text textAnio = documento.createTextNode(juego.getAnio() + "");
                 anio.appendChild(textAnio);
                 videojuego.appendChild(anio);
                 //Compañía
-                Element compania = documento.createElement("compañía");
+                Element compania = documento.createElement("compania");
                 Text textCompania = documento.createTextNode(juego.getCompania());
                 compania.appendChild(textCompania);
                 videojuego.appendChild(compania);
                 //Consola
-                Element consola = documento.createElement("ronsola");
+                Element consola = documento.createElement("consola");
                 Text textConsola = documento.createTextNode(juego.getConsola());
                 consola.appendChild(textConsola);
                 videojuego.appendChild(consola);
                 //Puntuación
-                Element puntuacion = documento.createElement("runtuación");
+                Element puntuacion = documento.createElement("puntuacion");
                 Text textPuntuacion = documento.createTextNode(juego.getPuntuacion() + "");
                 puntuacion.appendChild(textPuntuacion);
                 videojuego.appendChild(puntuacion);
@@ -198,6 +205,89 @@ public class Main {
             System.out.println("Error de configuración del transformador: " + e.getMessage());
         } catch (TransformerException e){
             System.out.println("Error al transformar el documento XML: " + e.getMessage());
+        }
+    }
+
+    /**
+     * Método para leer el XML con SAX.
+     * @since 1.2
+     * @param xml File fichero XML a leer
+     */
+    public static void leerXML(File xml){
+        try {
+            SAXParserFactory fabrica = SAXParserFactory.newInstance();
+            SAXParser parser = fabrica.newSAXParser();
+
+            DefaultHandler manejador = new DefaultHandler(){
+                boolean bTitulo = false;
+                boolean bAnio = false;
+                boolean bCompania = false;
+                boolean bConsola = false;
+                boolean bPuntuacion = false;
+                boolean bRecomendacion = false;
+
+                /**
+                 * Método que se ejecuta al encontrar el inicio de un elemento.
+                 * @param uri String
+                 * @param localName String
+                 * @param qName String
+                 * @param attributes Attributes
+                 * @throws SAXException Si hay un error al procesar el elemento.
+                 * @since 1.2
+                 */
+                @Override
+                public void startElement(String uri, String localName, String qName, Attributes attributes)throws SAXException {
+
+                    if (qName.equalsIgnoreCase("titulo")) {
+                        bTitulo = true;
+                    } else if (qName.equalsIgnoreCase("anio")) {
+                        bAnio = true;
+                    } else if (qName.equalsIgnoreCase("compania")) {
+                        bCompania = true;
+                    } else if (qName.equalsIgnoreCase("consola")) {
+                        bConsola = true;
+                    } else if (qName.equalsIgnoreCase("puntuacion")) {
+                        bPuntuacion = true;
+                    } else if (qName.equalsIgnoreCase("recomendacion")) {
+                        bRecomendacion = true;
+                    }
+                }
+
+                /**
+                 * Método que se ejecuta al encontrar el contenido de un elemento.
+                 * @param ch char[]
+                 * @param start int
+                 * @param length int
+                 * @throws SAXException Si hay un error al procesar el contenido.
+                 * @since 1.2
+                 */
+                @Override
+                public void characters(char[] ch, int start, int length)throws SAXException {
+                    if (bTitulo) {
+                        System.out.println("\nTítulo: " + new String(ch, start, length));
+                        bTitulo = false;
+                    } else if (bAnio) {
+                        System.out.println("Año: " + new String(ch, start, length));
+                        bAnio = false;
+                    } else if (bCompania) {
+                        System.out.println("Compañía: " + new String(ch, start, length));
+                        bCompania = false;
+                    } else if (bConsola) {
+                        System.out.println("Consola: " + new String(ch, start, length));
+                        bConsola = false;
+                    } else if (bPuntuacion) {
+                        System.out.println("Puntuación: " + new String(ch, start, length));
+                        bPuntuacion = false;
+                    } else if (bRecomendacion) {
+                        System.out.println("Recomendación: " + new String(ch, start, length));
+                        bRecomendacion = false;
+                    }
+                }
+
+            };
+            parser.parse(xml, manejador);
+        } catch (IOException | ParserConfigurationException | SAXException e) {
+            System.out.println("Error al leer el XML: " + e.getMessage());
         }
     }
 }
