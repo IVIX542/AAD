@@ -116,19 +116,21 @@ public class Main {
      * @param xml File fichero XML a crear
      */
     public static void crearXML(File xml){
-        for (Juego juego : juegos) {
-            try {
-                //Declaración de variables relacionadas con el XML
-                DocumentBuilderFactory fabrica = DocumentBuilderFactory.newInstance();
-                DocumentBuilder constructor = fabrica.newDocumentBuilder();
-                DOMImplementation implementacion = constructor.getDOMImplementation();
+        try {
 
-                //Creación del documento XML
-                Document documento = implementacion.createDocument(null, xml.getName(), null);
-                documento.setXmlVersion("1.0");
+            //Declaración de variables relacionadas con el XML
+            DocumentBuilderFactory fabrica = DocumentBuilderFactory.newInstance();
+            DocumentBuilder constructor = fabrica.newDocumentBuilder();
+            DOMImplementation implementacion = constructor.getDOMImplementation();
 
-                //Creación de los elementos principales
-                Element videojuegos = documento.createElement("Videojuegos");
+            //Creación del documento XML
+            Document documento = implementacion.createDocument(null, xml.getName(), null);
+            documento.setXmlVersion("1.0");
+
+            //Creación de los elementos principales
+            Element videojuegos = documento.createElement("Videojuegos");
+
+            for (Juego juego : juegos) {
 
                 Element videojuego = documento.createElement("Videojuego");
                 videojuego.setAttribute("id", juego.getId());
@@ -169,14 +171,14 @@ public class Main {
 
                 Transformer transformer = TransformerFactory.newInstance().newTransformer();
                 transformer.transform(source, result);
-
-            } catch (ParserConfigurationException e) {
-                System.out.println("Error al crear el XML: " + e.getMessage());
-            } catch(TransformerConfigurationException e){
-                System.out.println("Error de configuración del transformador: " + e.getMessage());
-            } catch (TransformerException e){
-                System.out.println("Error al transformar el documento XML: " + e.getMessage());
             }
+
+        } catch (ParserConfigurationException e) {
+            System.out.println("Error al crear el XML: " + e.getMessage());
+        } catch(TransformerConfigurationException e){
+            System.out.println("Error de configuración del transformador: " + e.getMessage());
+        } catch (TransformerException e){
+            System.out.println("Error al transformar el documento XML: " + e.getMessage());
         }
     }
 }
