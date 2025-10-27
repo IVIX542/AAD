@@ -14,7 +14,8 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
-        extraerDatos();
+        File txt = new File("Catalogo_inicial_sin_formato.txt");
+        extraerDatos(txt);
 
     }
 
@@ -22,10 +23,9 @@ public class Main {
      * Método para extraer los datos del fichero de texto y mostrarlos por consola.
      * @since 1.0
      */
-    public static void extraerDatos(){
+    public static void extraerDatos(File txt){
         try {
             //Declaracion de variables relacionadas con el txt
-            File txt = new File("Catalogo_inicial_sin_formato.txt");
             FileReader fr = new FileReader(txt);
             BufferedReader br = new BufferedReader(fr);
             String linea;
