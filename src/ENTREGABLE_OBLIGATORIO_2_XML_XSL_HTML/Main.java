@@ -1,7 +1,7 @@
 /**
  * Clase Main que contiene el método main para la ejecución del programa.
  * @author Iván López Benítez
- * @version 1.0
+ * @version 1.1
  * Fecha: 26/10/2025
 */
 
@@ -9,10 +9,17 @@
 import java.io.File;
 import java.io.FileReader;
 import java.io.BufferedReader;
+import java.util.ArrayList;
 //Excepciones
 import java.io.IOException;
 
 public class Main {
+    public static ArrayList<Juego> juegos = new ArrayList<>();
+
+    /**
+     * Método principal para la ejecución del programa.
+     * @param args
+     */
     public static void main(String[] args) {
         File txt = new File("Catalogo_inicial_sin_formato.txt");
         extraerDatos(txt);
@@ -60,6 +67,9 @@ public class Main {
                 //Puntuación
                 juego.setPuntuacion(Double.parseDouble(puntuacion));
 
+                //Añadir el juego al arraylist
+                juegos.add(juego);
+
                 System.out.println("\nJuego " + juego.getId() + ":");
                 System.out.println("Título: " + juego.getTitulo());
                 System.out.println("Año: " + juego.getAnio());
@@ -71,6 +81,16 @@ public class Main {
             
         } catch (IOException e) {
             System.out.println("Error al leer el fichero: " + e.getMessage());
+        }
+    }
+
+    /**
+     * Método para crear un XML a partit de los juegos leídos.
+     * @since 1.1
+     */
+    public static void crearXML(){
+        for (Juego juego : juegos) {
+            
         }
     }
 }
