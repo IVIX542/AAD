@@ -1,7 +1,7 @@
 /**
  * Clase Main que contiene el método main para la ejecución del programa.
  * @author Iván López Benítez
- * @version 1.3
+ * @version 1.4
  * @since 1.0
  * Fecha: 26/10/2025
  */
@@ -9,9 +9,11 @@
 import java.util.Scanner;
 //Manejo de ficheros
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.BufferedReader;
 import java.util.ArrayList;
+import java.util.Comparator;
 
 //XML
 import javax.xml.parsers.DocumentBuilder;
@@ -21,8 +23,10 @@ import javax.xml.transform.Source;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Result;
 import javax.xml.transform.stream.StreamResult;
+import javax.xml.transform.stream.StreamSource;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.TransformerFactoryConfigurationError;
 
 //DOM
 import org.w3c.dom.DOMImplementation;
@@ -43,8 +47,6 @@ import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 import org.xml.sax.SAXException;
 
-
-
 public class Main {
     
     //ArrayList global, para usarlo en todos los métodos de la clase Main
@@ -52,6 +54,7 @@ public class Main {
     
     /**
      * Método principal para la ejecución del programa.
+     * @since 1.0
      * @param args
      */
     public static void main(String[] args) {
@@ -60,12 +63,15 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         File txt = new File("Catalogo_inicial_sin_formato.txt");
         File xml = new File("Catalogo_juegos.xml");
+        File xmlRecomendados = new File("Catalogo_juegos_recomendados.xml");
+        File xsl = new File("Catalogo_plantilla.xsl");
+        File html = new File("Catalogo_recomendado_top.html");
 
         //Llamadas a métodos
         extraerDatos(txt);
         crearXML(xml);
         leerXML(xml);
-
+        
         //Cambiar la recomendación de un juego mediante un bucle
         System.out.println("\nDeseas cambiar la recomendación de algún juego? (S/N): ");
         String respuestaInicial = sc.nextLine();
@@ -76,7 +82,7 @@ public class Main {
             continuar = false;
         } else{
             continuar=true;
-
+            
             while(continuar){
                 System.out.print("\nIntroduce el ID del juego que no recomiendes: ");
                 String idJuego = sc.nextLine();
@@ -95,13 +101,16 @@ public class Main {
                     System.out.println("Respuesta no válida. Saliendo del programa.");
                     continuar = false;
                     break;
-                    
                 }
             }
         }
-
+        
+        crearRecomendadosXML(xmlRecomendados);
         //Mostrar los juegos no recomendados
         mostrarNoRecomendados();
+
+        //Crear el HTML a partir del XML y la hoja de estilo XSL
+        crearHTML(xmlRecomendados, xsl, html);
 
         sc.close();
     }
@@ -176,11 +185,9 @@ public class Main {
             DOMImplementation implementacion = constructor.getDOMImplementation();
 
             //Creación del documento XML
-            Document documento = implementacion.createDocument(null, xml.getName().substring(0, xml.getName().indexOf('.')), null);
+            Document documento = implementacion.createDocument(null, "videojuegos", null);
             documento.setXmlVersion("1.0");
 
-            //Creación de los elementos principales
-            Element videojuegos = documento.createElement("videojuegos");
 
             //Bucle SOLO para cada videojuego en el arraylist
             for (Juego juego : juegos) {
@@ -221,8 +228,7 @@ public class Main {
                 videojuego.appendChild(recomendacion);
 
                 //Añadir cada videojuego al elemento principal
-                videojuegos.appendChild(videojuego);
-                documento.getDocumentElement().appendChild(videojuegos);
+                documento.getDocumentElement().appendChild(videojuego);
             }
 
             //Configuracion y creacion del fichero XML
@@ -366,6 +372,101 @@ public class Main {
     }
 
     /**
+     * Método para crear un XML con los juegos recomendados
+     * @since 1.4
+     */
+    public static void crearRecomendadosXML(File xmlRecomendados){
+        //Crear un nuevo ArrayList con los juegos recomendados
+        ArrayList<Juego> juegosRecomendados = new ArrayList<>();
+        for (Juego juego : juegos) {
+            if (juego.getRecomendacion().equals("S")) {
+                juegosRecomendados.add(juego);
+            }
+        }
+
+        //Ordenar los juegos recomendados de mayor a menor puntuación
+        juegosRecomendados.sort(Comparator.comparingDouble(Juego::getPuntuacion).reversed());
+
+        try {
+
+            //Declaración de variables relacionadas con el XML
+            DocumentBuilderFactory fabrica = DocumentBuilderFactory.newInstance();
+            DocumentBuilder constructor = fabrica.newDocumentBuilder();
+            DOMImplementation implementacion = constructor.getDOMImplementation();
+
+            //Creación del documento XML
+            Document documento = implementacion.createDocument(null, "videojuegos", null);
+            documento.setXmlVersion("1.0");
+
+
+            //Bucle SOLO para cada videojuego en el arraylist
+            for (Juego juego : juegosRecomendados) {
+
+                Element videojuego = documento.createElement("videojuego");
+                videojuego.setAttribute("id", juego.getId());
+
+                //Elementos de cada videojuego
+                //Titulo
+                Element titulo = documento.createElement("titulo");
+                Text tetxTitulo = documento.createTextNode(juego.getTitulo());
+                titulo.appendChild(tetxTitulo);
+                videojuego.appendChild(titulo);
+                //Año
+                Element anio = documento.createElement("anio");
+                Text textAnio = documento.createTextNode(juego.getAnio() + "");
+                anio.appendChild(textAnio);
+                videojuego.appendChild(anio);
+                //Compañía
+                Element compania = documento.createElement("compania");
+                Text textCompania = documento.createTextNode(juego.getCompania());
+                compania.appendChild(textCompania);
+                videojuego.appendChild(compania);
+                //Consola
+                Element consola = documento.createElement("consola");
+                Text textConsola = documento.createTextNode(juego.getConsola());
+                consola.appendChild(textConsola);
+                videojuego.appendChild(consola);
+                //Puntuación
+                Element puntuacion = documento.createElement("puntuacion");
+                Text textPuntuacion = documento.createTextNode(juego.getPuntuacion() + "");
+                puntuacion.appendChild(textPuntuacion);
+                videojuego.appendChild(puntuacion);
+                //Recomendación (siempre "S", hasta que el usuario lo cambie manualmente)
+                Element recomendacion = documento.createElement("recomendacion");
+                Text textRecomendacion = documento.createTextNode(juego.getRecomendacion());
+                recomendacion.appendChild(textRecomendacion);
+                videojuego.appendChild(recomendacion);
+
+                //Añadir cada videojuego al elemento principal
+                documento.getDocumentElement().appendChild(videojuego);
+            }
+
+            //Configuracion y creacion del fichero XML
+            Source source = new DOMSource(documento);
+            Result result = new StreamResult(xmlRecomendados);
+
+            //Transformador
+            Transformer transformer = TransformerFactory.newInstance().newTransformer();
+            
+            //Formato con sangrías
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+            transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+
+            //Transformación y creación del XML
+            transformer.transform(source, result);
+
+        }
+        //Excepciones
+        catch (ParserConfigurationException e) {
+            System.out.println("Error al crear el XML: " + e.getMessage());
+        } catch(TransformerConfigurationException e){
+            System.out.println("Error de configuración del transformador: " + e.getMessage());
+        } catch (TransformerException e){
+            System.out.println("Error al transformar el documento XML: " + e.getMessage());
+        }
+    }
+
+    /**
      * Método para crear un HTML a partir de un XML y una hoja de estilo XSL.
      * @since 1.3
      * @param xml File fichero XML de entrada
@@ -375,6 +476,30 @@ public class Main {
      * @exception TransformerException Si hay un error al transformar el documento XML.
      */
     public static void crearHTML(File xml, File xsl, File html){
+        try {
+            //Ficheros
+            // String plantilla = xsl.getAbsolutePath();
+            // String Sxml = xml.getAbsolutePath();
+            // String Shtml = html.getAbsolutePath();
+            
+            //Streams
+            FileOutputStream fos = new FileOutputStream(html);
+            Source estilos = new StreamSource(xsl);
+            Source datos = new StreamSource(xml);
+
+            //Resultado de la transformación
+            Result resultado = new StreamResult(fos);
+
+            //Transformador
+            Transformer transformer = TransformerFactory.newInstance().newTransformer(estilos);
+            transformer.transform(datos, resultado);
+
+            //Cerramos el Stream
+            fos.close();
+            
+        } catch (IOException | TransformerFactoryConfigurationError | TransformerException e) {
+            System.out.println("Error al crear el HTML: " + e.getMessage());
+        }
         
     }
 }
