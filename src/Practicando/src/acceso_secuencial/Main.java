@@ -45,7 +45,8 @@ public class Main {
 		FileWriter fw = new FileWriter(fich);
 		
 		fw.append("Hola\n");
-		
+		sc.close();
+		fw.close();
 	}
 
 }

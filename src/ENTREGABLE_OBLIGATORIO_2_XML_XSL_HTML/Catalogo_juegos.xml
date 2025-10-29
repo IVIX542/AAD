@@ -775,7 +775,7 @@
             <compania>Croteam</compania>
             <consola>PS5, Xbox Series X/S, PC</consola>
             <puntuacion>8.9</puntuacion>
-            <recomendacion>S</recomendacion>
+            <recomendacion>N</recomendacion>
         </videojuego>
         <videojuego id="vg098">
             <titulo>Monster Hunter Wilds</titulo>
@@ -783,7 +783,7 @@
             <compania>Capcom</compania>
             <consola>PS5, Xbox Series X/S, PC</consola>
             <puntuacion>8.8</puntuacion>
-            <recomendacion>S</recomendacion>
+            <recomendacion>N</recomendacion>
         </videojuego>
         <videojuego id="vg099">
             <titulo>Kingdom Come: Deliverance II</titulo>
@@ -791,7 +791,7 @@
             <compania>Warhorse Studios</compania>
             <consola>PS5, Xbox Series X/S, PC</consola>
             <puntuacion>8.8</puntuacion>
-            <recomendacion>S</recomendacion>
+            <recomendacion>N</recomendacion>
         </videojuego>
         <videojuego id="vg100">
             <titulo>Sid Meier's Civilization VII</titulo>
@@ -799,7 +799,7 @@
             <compania>Firaxis Games</compania>
             <consola>PS4, PS5, Xbox One, Xbox Series X/S, PC, Switch 2</consola>
             <puntuacion>9.0</puntuacion>
-            <recomendacion>S</recomendacion>
+            <recomendacion>N</recomendacion>
         </videojuego>
     </videojuegos>
 </Catalogo_juegos>

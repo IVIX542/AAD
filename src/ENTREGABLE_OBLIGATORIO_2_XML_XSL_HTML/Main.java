@@ -1,10 +1,12 @@
 /**
  * Clase Main que contiene el método main para la ejecución del programa.
  * @author Iván López Benítez
- * @version 1.2
+ * @version 1.3
+ * @since 1.0
  * Fecha: 26/10/2025
-*/
+ */
 
+import java.util.Scanner;
 //Manejo de ficheros
 import java.io.File;
 import java.io.FileReader;
@@ -44,15 +46,18 @@ import org.xml.sax.SAXException;
 
 
 public class Main {
+    
     //ArrayList global, para usarlo en todos los métodos de la clase Main
     public static ArrayList<Juego> juegos = new ArrayList<>();
-
+    
     /**
      * Método principal para la ejecución del programa.
      * @param args
      */
     public static void main(String[] args) {
         //Declaraciones
+        boolean continuar = true;
+        Scanner sc = new Scanner(System.in);
         File txt = new File("Catalogo_inicial_sin_formato.txt");
         File xml = new File("Catalogo_juegos.xml");
 
@@ -61,6 +66,44 @@ public class Main {
         crearXML(xml);
         leerXML(xml);
 
+        //Cambiar la recomendación de un juego mediante un bucle
+        System.out.println("\nDeseas cambiar la recomendación de algún juego? (S/N): ");
+        String respuestaInicial = sc.nextLine();
+        if(respuestaInicial.equalsIgnoreCase("N")){
+            continuar = false;
+        }else if(!respuestaInicial.equalsIgnoreCase("S")){
+            System.out.println("Respuesta no válida. Saliendo del programa.");
+            continuar = false;
+        } else{
+            continuar=true;
+
+            while(continuar){
+                System.out.print("\nIntroduce el ID del juego que no recomiendes: ");
+                String idJuego = sc.nextLine();
+                cambiarRecomendacion(idJuego);
+                crearXML(xml); //Volver a crear el XML con la recomendación modificada
+                System.out.print("\nDeseas continuar cambiando recomendaciones? (S/N): ");
+                String respuesta = sc.nextLine();
+                switch(respuesta.toUpperCase()){
+                    case "S":
+                    continuar = true;
+                    break;
+                    case "N":
+                    continuar = false;
+                    break;
+                    default:
+                    System.out.println("Respuesta no válida. Saliendo del programa.");
+                    continuar = false;
+                    break;
+                    
+                }
+            }
+        }
+
+        //Mostrar los juegos no recomendados
+        mostrarNoRecomendados();
+
+        sc.close();
     }
 
     /**
@@ -111,7 +154,6 @@ public class Main {
 
             }
             br.close();
-            
         } catch (IOException e) {
             System.out.println("Error al leer el fichero: " + e.getMessage());
         }
@@ -292,5 +334,47 @@ public class Main {
         } catch (IOException | ParserConfigurationException | SAXException e) {
             System.out.println("Error al leer el XML: " + e.getMessage());
         }
+    }
+
+    /**
+     * Método para cambiar la recomendación de un juego de "S" a "N".
+     * @since 1.3
+     * @param idJuego String ID del juego a modificar
+     */
+
+    public static void cambiarRecomendacion(String idJuego){
+        for (Juego juego : juegos) {
+            if (juego.getId().equals(idJuego)) {
+                juego.setRecomendacion("N");
+                System.out.println("Recomendación del juego \"" + juego.getTitulo() + "\" cambiada a 'N'.");
+                return;
+            }
+        }
+        System.out.println("No se encontró un juego con el ID " + idJuego + ".");
+    }
+
+    /**
+     * Método para mostrar los juegos no recomendados
+    */
+    public static void mostrarNoRecomendados(){
+        System.out.println("\nJuegos no recomendados:");
+        for (Juego juego : juegos) {
+            if (juego.getRecomendacion().equals("N")) {
+                System.out.println("- " + juego.getTitulo() + " (ID: " + juego.getId() + ")");
+            }
+        }
+    }
+
+    /**
+     * Método para crear un HTML a partir de un XML y una hoja de estilo XSL.
+     * @since 1.3
+     * @param xml File fichero XML de entrada
+     * @param xsl File fichero XSL de entrada
+     * @param html File fichero HTML de salida
+     * @exception ParserConfigurationException Si hay un error en la configuración del parser.
+     * @exception TransformerException Si hay un error al transformar el documento XML.
+     */
+    public static void crearHTML(File xml, File xsl, File html){
+        
     }
 }
