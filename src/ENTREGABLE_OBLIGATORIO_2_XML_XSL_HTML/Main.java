@@ -477,10 +477,6 @@ public class Main {
      */
     public static void crearHTML(File xml, File xsl, File html){
         try {
-            //Ficheros
-            // String plantilla = xsl.getAbsolutePath();
-            // String Sxml = xml.getAbsolutePath();
-            // String Shtml = html.getAbsolutePath();
             
             //Streams
             FileOutputStream fos = new FileOutputStream(html);
