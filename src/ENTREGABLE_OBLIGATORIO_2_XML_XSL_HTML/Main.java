@@ -59,7 +59,7 @@ public class Main {
      */
     public static void main(String[] args) {
         //Declaraciones
-        boolean continuar = true;
+        boolean continuar = false;
         Scanner sc = new Scanner(System.in);
         File txt = new File("Catalogo_inicial_sin_formato.txt");
         File xml = new File("Catalogo_juegos.xml");
