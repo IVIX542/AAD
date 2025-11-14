@@ -206,6 +206,40 @@ public class Main {
 		}
 	}
 	
-	
+	/**
+	 * Método para insertar un nuevo registro en la tabla
+	 * 
+	 * */
+	public static void insertarRegistro(final String BBDD, final String TABLA, Connection conexion) {
+		String sqlShowTables = "SELECT * FROM " + BBDD + "." + TABLA + ";";
+		
+		try (PreparedStatement psSelect = conexion.prepareStatement(sqlShowTables)) {
+            
+            try (ResultSet rs = psSelect.executeQuery()) { //Probamos la ejecución de la consulta
+            	ResultSetMetaData rsMetaData = rs.getMetaData();
+            	int numColumnas = rsMetaData.getColumnCount();
+            	
+            	for (int i = 1; i <= numColumnas; i++) {
+                    System.out.println(rsMetaData.getColumnName(i));
+                }
+            	
+            	System.out.println("\n---------------------------");
+            	
+                while (rs.next()) {
+                	for (int i = 1; i <= numColumnas; i++) {
+                        
+                        String valor = String.valueOf(rs.getObject(i));
+                        
+                        System.out.println(valor);
+                    }
+                	System.out.println();
+                }
+                System.out.println("--------------------------");
+            }
+             
+        } catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
 
 }
