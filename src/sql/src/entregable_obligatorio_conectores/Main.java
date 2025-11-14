@@ -70,9 +70,10 @@ public class Main {
 				
 				switch(eleccion) {
 				case 1:
-					mostrarRegistros(BBDD, tabla, conexion);
+					mostrarColumnas(BBDD, tabla, conexion);
 					break;
 				case 2:
+					mostrarRegistros(BBDD, tabla, conexion);
 					break;
 				case 3:
 					break;
@@ -87,7 +88,7 @@ public class Main {
 					break;
 				}
 				
-				
+				System.out.println("\nDespués del switch");
 			}
 			
 			conexion.close();
@@ -104,7 +105,7 @@ public class Main {
 	 * @param Connection conexión con la base de datos
 	 * */
 	public static void mostrarTablas(Connection conexion) {
-		String sqlShowTables = "SHOW TABLES";
+		String sqlShowTables = "SHOW TABLES" + ";";
 		
 		try (PreparedStatement psSelect = conexion.prepareStatement(sqlShowTables)) {
             
@@ -145,9 +146,10 @@ public class Main {
 	 * Método para ver todos los registros de una tabla
 	 * @param String BBDD
 	 * @param String TABLA
+	 * @param Connection conexion
 	 * */
 	public static void mostrarRegistros(final String BBDD, final String TABLA, Connection conexion) {
-		String sqlShowTables = "SELECT * FROM " + BBDD + "." + TABLA;
+		String sqlShowTables = "SELECT * FROM " + BBDD + "." + TABLA + ";";
 		
 		try (PreparedStatement psSelect = conexion.prepareStatement(sqlShowTables)) {
             
@@ -158,6 +160,32 @@ public class Main {
             	for (int i = 1; i <= numColumnas; i++) {
                     System.out.print(rsMetaData.getColumnName(i) + "\t");
                 }
+      
+            }
+             
+        } catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * Método para mostrar el nombre de todas las columnas de la tabla
+	 * @param String BBDD
+	 * @param String TABLA
+	 * @param Connection conexion
+	 * */
+	public static void mostrarColumnas(final String BBDD, final String TABLA, Connection conexion) {
+		String sqlShowTables = "SELECT * FROM " + BBDD + "." + TABLA + ";";
+		
+		try (PreparedStatement psSelect = conexion.prepareStatement(sqlShowTables)) {
+            
+            try (ResultSet rs = psSelect.executeQuery()) { //Probamos la ejecución de la consulta
+            	ResultSetMetaData rsMetaData = rs.getMetaData();
+            	int numColumnas = rsMetaData.getColumnCount();
+            	
+            	for (int i = 1; i <= numColumnas; i++) {
+                    System.out.println(rsMetaData.getColumnName(i));
+                }
             	
             	System.out.println("\n---------------------------");
             	
@@ -166,7 +194,7 @@ public class Main {
                         
                         String valor = String.valueOf(rs.getObject(i));
                         
-                        System.out.print(valor + "\t");
+                        System.out.println(valor);
                     }
                 	System.out.println();
                 }
@@ -177,5 +205,7 @@ public class Main {
 			e.printStackTrace();
 		}
 	}
+	
+	
 
 }
