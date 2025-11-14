@@ -60,7 +60,35 @@ public class Main {
 			
 			System.out.println("Tabla " + tabla + " seleccionada.");
 			
-			menuTabla(sc);
+			boolean salir = false;
+			
+			while(!salir) {
+				menuTabla();
+				
+				System.out.print("\nTeclea la opción que desea realizar: ");
+				int eleccion = Integer.parseInt(sc.nextLine());
+				
+				switch(eleccion) {
+				case 1:
+					mostrarRegistros(BBDD, tabla, conexion);
+					break;
+				case 2:
+					break;
+				case 3:
+					break;
+				case 4:
+					break;
+				case 5:
+					break;
+				case 6:
+					break;
+				case 7:
+					salir = true;
+					break;
+				}
+				
+				
+			}
 			
 			conexion.close();
 		} catch (SQLException e) {
@@ -99,10 +127,9 @@ public class Main {
 	 * @param Scanner sc utilizado para la entrada por teclado
 	 * @return int eleccion de la acción a realizar
 	 * */
-	public static int menuTabla(Scanner sc) {
+	public static void menuTabla() {
 		
-		int eleccion = Integer.parseInt(sc.nextLine());
-		
+				
 		System.out.println("Teclea la opción que deseas realizar:");
 		System.out.println("\n1. Ver todos los registros de la tabla");
 		System.out.println("2. Ver el nombre de todas las columnas de la tabla");
@@ -112,7 +139,43 @@ public class Main {
 		System.out.println("6. Ver el tipo de datos y extensión de las columnas de la tabla");
 		System.out.println("7. Salir del programa");
 		
-		return eleccion;
+	}
+	
+	/**
+	 * Método para ver todos los registros de una tabla
+	 * @param String BBDD
+	 * @param String TABLA
+	 * */
+	public static void mostrarRegistros(final String BBDD, final String TABLA, Connection conexion) {
+		String sqlShowTables = "SELECT * FROM " + BBDD + "." + TABLA;
+		
+		try (PreparedStatement psSelect = conexion.prepareStatement(sqlShowTables)) {
+            
+            try (ResultSet rs = psSelect.executeQuery()) { //Probamos la ejecución de la consulta
+            	ResultSetMetaData rsMetaData = rs.getMetaData();
+            	int numColumnas = rsMetaData.getColumnCount();
+            	
+            	for (int i = 1; i <= numColumnas; i++) {
+                    System.out.print(rsMetaData.getColumnName(i) + "\t");
+                }
+            	
+            	System.out.println("\n---------------------------");
+            	
+                while (rs.next()) {
+                	for (int i = 1; i <= numColumnas; i++) {
+                        
+                        String valor = String.valueOf(rs.getObject(i));
+                        
+                        System.out.print(valor + "\t");
+                    }
+                	System.out.println();
+                }
+                System.out.println("--------------------------");
+            }
+             
+        } catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
 }
