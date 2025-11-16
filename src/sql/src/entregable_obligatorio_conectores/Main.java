@@ -2,8 +2,11 @@ package entregable_obligatorio_conectores;
 
 //Imports
 import java.sql.*;
-import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.StringJoiner;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 
 /**
@@ -76,6 +79,7 @@ public class Main {
 					mostrarRegistros(BBDD, tabla, conexion);
 					break;
 				case 3:
+					insertarRegistro(BBDD, tabla, conexion);
 					break;
 				case 4:
 					break;
@@ -154,10 +158,10 @@ public class Main {
 		try (PreparedStatement psSelect = conexion.prepareStatement(sqlShowTables)) {
             
             try (ResultSet rs = psSelect.executeQuery()) { //Probamos la ejecución de la consulta
-            	ResultSetMetaData rsMetaData = rs.getMetaData();
-            	int numColumnas = rsMetaData.getColumnCount();
+            		ResultSetMetaData rsMetaData = rs.getMetaData();
+            		int numColumnas = rsMetaData.getColumnCount();
             	
-            	for (int i = 1; i <= numColumnas; i++) {
+            		for (int i = 1; i <= numColumnas; i++) {
                     System.out.print(rsMetaData.getColumnName(i) + "\t");
                 }
       
@@ -176,6 +180,7 @@ public class Main {
 	 * */
 	public static void mostrarColumnas(final String BBDD, final String TABLA, Connection conexion) {
 		String sqlShowTables = "SELECT * FROM " + BBDD + "." + TABLA + ";";
+		ArrayList<String> valores = new ArrayList<String>();
 		
 		try (PreparedStatement psSelect = conexion.prepareStatement(sqlShowTables)) {
             
@@ -189,17 +194,20 @@ public class Main {
             	
             	System.out.println("\n---------------------------");
             	
+            	
                 while (rs.next()) {
                 	for (int i = 1; i <= numColumnas; i++) {
                         
                         String valor = String.valueOf(rs.getObject(i));
                         
                         System.out.println(valor);
+                        valores.add(valor);
                     }
                 	System.out.println();
                 }
                 System.out.println("--------------------------");
             }
+            
              
         } catch (SQLException e) {
 			e.printStackTrace();
@@ -208,14 +216,31 @@ public class Main {
 	
 	/**
 	 * Método para insertar un nuevo registro en la tabla
-	 * 
+	 * @param String BBDD
+	 * @param String TABLA
+	 * @param Connection conexion
+	 * @param Map<String, Object> datos
 	 * */
 	public static void insertarRegistro(final String BBDD, final String TABLA, Connection conexion) {
-		String sqlShowTables = "SELECT * FROM " + BBDD + "." + TABLA + ";";
+		Scanner sc = new Scanner(System.in);
 		
-		try (PreparedStatement psSelect = conexion.prepareStatement(sqlShowTables)) {
-            
-            try (ResultSet rs = psSelect.executeQuery()) { //Probamos la ejecución de la consulta
+		ArrayList<String> valores = new ArrayList<String>();
+
+		Map<String, Object> datos = null;
+		
+		//StringJoiner's utilizados para hacer un string formateado
+		StringJoiner columnas = new StringJoiner(", ");
+		StringJoiner interrogantes = new StringJoiner(", ");
+		
+		
+		//String que contiene la consulta a ejecutar
+		String sqlInsertRow = "INSERT INTO " + BBDD + "." + TABLA + "(" + columnas.toString() + ") VALUES ("
+		+ interrogantes.toString() + ");";
+		
+		
+		try (PreparedStatement ps = conexion.prepareStatement(sqlInsertRow)) {
+			
+			try (ResultSet rs = ps.executeQuery()) { //Probamos la ejecución de la consulta
             	ResultSetMetaData rsMetaData = rs.getMetaData();
             	int numColumnas = rsMetaData.getColumnCount();
             	
@@ -225,21 +250,36 @@ public class Main {
             	
             	System.out.println("\n---------------------------");
             	
+            	
                 while (rs.next()) {
                 	for (int i = 1; i <= numColumnas; i++) {
                         
                         String valor = String.valueOf(rs.getObject(i));
                         
                         System.out.println(valor);
+                        valores.add(valor);
                     }
                 	System.out.println();
                 }
                 System.out.println("--------------------------");
             }
+			
+			int i = 0;
+			
+			for(Object valor : datos.values()) {
+				ps.setObject(i++, valor);
+			}
+			
+			int numFilas = ps.executeUpdate();
+			System.out.println("Se insertaron " + numFilas + " filas en la tabla " + TABLA);
              
         } catch (SQLException e) {
 			e.printStackTrace();
 		}
+		
+		
+		
+		sc.close();
 	}
 
 }
