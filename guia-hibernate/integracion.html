@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Hibernate + Eclipse | Integración</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <!-- SIDEBAR -->
+        <nav class="sidebar">
+            <div class="brand">
+                <span>☕</span> Hibernate Wiki
+            </div>
+            <a href="index.html" class="nav-link">Introducción</a>
+            <a href="requisitos.html" class="nav-link">1. Requisitos</a>
+            <a href="descargas.html" class="nav-link">2. Descargas (JARS)</a>
+            <a href="integracion.html" class="nav-link active">3. Integración Eclipse</a>
+            <a href="configuracion.html" class="nav-link">4. Configuración</a>
+            <a href="errores.html" class="nav-link">5. Errores Comunes</a>
+            <a href="tips.html" class="nav-link">6. Pro Tips</a>
+
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <section id="integracion">
+                <h2>3. Integración en Eclipse</h2>
+
+                <div class="card">
+                    <h3>Paso 1: Crear el Proyecto</h3>
+                    <p>Crea un <strong>Java Project</strong> normal.</p>
+                    <div class="alert alert-error">
+                        <span>⚠️</span>
+                        <div>
+                            <strong>MUY IMPORTANTE:</strong> Si Eclipse te pregunta <em>"Create module-info.java?"</em>,
+                            selecciona <strong>Don't Create</strong>. Si se crea, bórralo inmediatamente de la carpeta
+                            src.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Paso 2: Configurar Build Path</h3>
+                    <ol style="padding-left: 20px; line-height: 2;">
+                        <li>Clic derecho en el proyecto -> <strong>Build Path</strong> -> <strong>Configure Build
+                                Path...</strong></li>
+                        <li>Ve a la pestaña <strong>Libraries</strong>.</li>
+                        <li>Selecciona <strong>Classpath</strong> (Asegúrate de NO seleccionar Modulepath).</li>
+                        <li>Haz clic en el botón <strong>Add External JARs...</strong></li>
+                        <li>Selecciona <strong>TODOS</strong> los archivos descargados (Core, Driver y Ocultos).</li>
+                        <li>Pulsa <strong>Apply and Close</strong>.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <footer
+                style="margin-top: 60px; padding: 20px; text-align: center; color: #888; border-top: 1px solid #eee;">
+                <p>Documentación generada para aprendizaje de Hibernate. | <a href="politica.html"
+                        style="color: inherit;">Política de Privacidad</a></p>
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

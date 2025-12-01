@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Hibernate + Eclipse | Descargas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <!-- SIDEBAR -->
+        <nav class="sidebar">
+            <div class="brand">
+                <span>☕</span> Hibernate Wiki
+            </div>
+            <a href="index.html" class="nav-link">Introducción</a>
+            <a href="requisitos.html" class="nav-link">1. Requisitos</a>
+            <a href="descargas.html" class="nav-link active">2. Descargas (JARS)</a>
+            <a href="integracion.html" class="nav-link">3. Integración Eclipse</a>
+            <a href="configuracion.html" class="nav-link">4. Configuración</a>
+            <a href="errores.html" class="nav-link">5. Errores Comunes</a>
+            <a href="tips.html" class="nav-link">6. Pro Tips</a>
+
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <section id="descargas">
+                <h2>2. Descargas (El Kit de Supervivencia)</h2>
+                <p>Para Java moderno, necesitamos descargar varias piezas por separado.</p>
+
+                <div class="card">
+                    <div class="card-title">A. El Motor & El Driver</div>
+                    <p>Estos son los dos archivos fundamentales.</p>
+                    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                        <a href="https://sourceforge.net/projects/hibernate/files/hibernate-orm/" target="_blank"
+                            class="btn">
+                            📥 Descargar Hibernate Core (ZIP)
+                        </a>
+                        <a href="https://dev.mysql.com/downloads/connector/j/" target="_blank" class="btn btn-outline">
+                            📥 Descargar Driver MySQL
+                        </a>
+                    </div>
+                    <p style="margin-top: 16px; font-size: 0.9rem; color: #666;">* Para Hibernate, descomprime el ZIP y
+                        busca en <code>lib/required</code>.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">B. Dependencias "Ocultas" (Críticas para Java 11+)</div>
+                    <p>Si no añades estas, tendrás errores tipo <code>NoClassDefFoundError</code>. Descárgalas todas.
+                    </p>
+
+                    <table class="download-table">
+                        <thead>
+                            <tr>
+                                <th>Archivo</th>
+                                <th>Función</th>
+                                <th>Descarga</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>hibernate-jpa-2.1-api</strong></td>
+                                <td>Diccionario JPA (Annotations)</td>
+                                <td><a href="https://repo1.maven.org/maven2/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar"
+                                        class="btn btn-small">⬇ JAR</a></td>
+                            </tr>
+                            <tr>
+                                <td><strong>javax.transaction-api</strong></td>
+                                <td>Gestor de Transacciones</td>
+                                <td><a href="https://repo1.maven.org/maven2/javax/transaction/javax.transaction-api/1.3/javax.transaction-api-1.3.jar"
+                                        class="btn btn-small">⬇ JAR</a></td>
+                            </tr>
+                            <tr>
+                                <td><strong>jaxb-api</strong></td>
+                                <td>API XML</td>
+                                <td><a href="https://repo1.maven.org/maven2/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar"
+                                        class="btn btn-small">⬇ JAR</a></td>
+                            </tr>
+                            <tr>
+                                <td><strong>jaxb-runtime</strong></td>
+                                <td>Motor XML</td>
+                                <td><a href="https://repo1.maven.org/maven2/org/glassfish/jaxb/jaxb-runtime/2.3.1/jaxb-runtime-2.3.1.jar"
+                                        class="btn btn-small">⬇ JAR</a></td>
+                            </tr>
+                            <tr>
+                                <td><strong>istack-commons-runtime</strong></td>
+                                <td>Utilidad Interna</td>
+                                <td><a href="https://repo1.maven.org/maven2/com/sun/istack/istack-commons-runtime/3.0.7/istack-commons-runtime-3.0.7.jar"
+                                        class="btn btn-small">⬇ JAR</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <footer
+                style="margin-top: 60px; padding: 20px; text-align: center; color: #888; border-top: 1px solid #eee;">
+                <p>Documentación generada para aprendizaje de Hibernate. | <a href="politica.html"
+                        style="color: inherit;">Política de Privacidad</a></p>
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

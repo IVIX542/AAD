@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Hibernate + Eclipse | Errores</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <!-- SIDEBAR -->
+        <nav class="sidebar">
+            <div class="brand">
+                <span>☕</span> Hibernate Wiki
+            </div>
+            <a href="index.html" class="nav-link">Introducción</a>
+            <a href="requisitos.html" class="nav-link">1. Requisitos</a>
+            <a href="descargas.html" class="nav-link">2. Descargas (JARS)</a>
+            <a href="integracion.html" class="nav-link">3. Integración Eclipse</a>
+            <a href="configuracion.html" class="nav-link">4. Configuración</a>
+            <a href="errores.html" class="nav-link active">5. Errores Comunes</a>
+            <a href="tips.html" class="nav-link">6. Pro Tips</a>
+
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <section id="errores">
+                <h2>5. Errores Comunes y Soluciones</h2>
+
+                <div class="card">
+                    <div style="color: var(--md-sys-color-error); font-weight: bold; margin-bottom: 8px;">🔴 Error:
+                        NoClassDefFoundError</div>
+                    <p><strong>Causa:</strong> Falta un archivo .jar en el Build Path.</p>
+                    <p><strong>Solución:</strong> Revisa la tabla de la Sección 2. Te faltan las librerías JAXB o
+                        Transaction.</p>
+                </div>
+
+                <div class="card">
+                    <div style="color: var(--md-sys-color-error); font-weight: bold; margin-bottom: 8px;">🔴 Error:
+                        javax.persistence.Entity cannot be resolved</div>
+                    <p><strong>Causa:</strong> Eclipse no ve la librería JPA o está mal colocada.</p>
+                    <p><strong>Solución:</strong> Ve al Build Path y asegúrate de que los JARs están en
+                        <strong>Classpath</strong>, no en Modulepath.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div style="color: var(--md-sys-color-error); font-weight: bold; margin-bottom: 8px;">🔴 Error:
+                        Access denied for user 'root'</div>
+                    <p><strong>Causa:</strong> Contraseña incorrecta en el XML.</p>
+                    <p><strong>Solución:</strong> Edita <code>hibernate.cfg.xml</code> y pon la contraseña real de tu
+                        MySQL.</p>
+                </div>
+            </section>
+
+            <footer
+                style="margin-top: 60px; padding: 20px; text-align: center; color: #888; border-top: 1px solid #eee;">
+                <p>Documentación generada para aprendizaje de Hibernate. | <a href="politica.html"
+                        style="color: inherit;">Política de Privacidad</a></p>
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

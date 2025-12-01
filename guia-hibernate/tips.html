@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Hibernate + Eclipse | Pro Tips</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <!-- SIDEBAR -->
+        <nav class="sidebar">
+            <div class="brand">
+                <span>☕</span> Hibernate Wiki
+            </div>
+            <a href="index.html" class="nav-link">Introducción</a>
+            <a href="requisitos.html" class="nav-link">1. Requisitos</a>
+            <a href="descargas.html" class="nav-link">2. Descargas (JARS)</a>
+            <a href="integracion.html" class="nav-link">3. Integración Eclipse</a>
+            <a href="configuracion.html" class="nav-link">4. Configuración</a>
+            <a href="errores.html" class="nav-link">5. Errores Comunes</a>
+            <a href="tips.html" class="nav-link active">6. Pro Tips</a>
+
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <section id="pro-tips">
+                <h2>6. Pro Tips</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;">
+                    <div class="card">
+                        <div class="card-title">🚀 Múltiples XML</div>
+                        <p>No sobrescribas siempre el mismo archivo. Crea <code>hibernate-juegos.cfg.xml</code> y
+                            <code>hibernate-escuela.cfg.xml</code> y cárgalos en Java según necesites.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">🧹 Limpieza</div>
+                        <p>Si Eclipse muestra errores rojos pero el código está bien, ve a <strong>Project ->
+                                Clean...</strong> para forzar una recompilación.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">🛠️ HibernateUtil</div>
+                        <p>Usa siempre una clase Singleton auxiliar para crear la <code>SessionFactory</code> una sola
+                            vez al inicio de la app.</p>
+                    </div>
+                </div>
+            </section>
+
+            <footer
+                style="margin-top: 60px; padding: 20px; text-align: center; color: #888; border-top: 1px solid #eee;">
+                <p>Documentación generada para aprendizaje de Hibernate. | <a href="politica.html"
+                        style="color: inherit;">Política de Privacidad</a></p>
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

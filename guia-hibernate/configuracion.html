@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Hibernate + Eclipse | Configuración</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <!-- SIDEBAR -->
+        <nav class="sidebar">
+            <div class="brand">
+                <span>☕</span> Hibernate Wiki
+            </div>
+            <a href="index.html" class="nav-link">Introducción</a>
+            <a href="requisitos.html" class="nav-link">1. Requisitos</a>
+            <a href="descargas.html" class="nav-link">2. Descargas (JARS)</a>
+            <a href="integracion.html" class="nav-link">3. Integración Eclipse</a>
+            <a href="configuracion.html" class="nav-link active">4. Configuración</a>
+            <a href="errores.html" class="nav-link">5. Errores Comunes</a>
+            <a href="tips.html" class="nav-link">6. Pro Tips</a>
+
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <section id="configuracion">
+                <h2>4. Configuración (XML)</h2>
+                <p>Este es el "mapa" que le dice a Hibernate dónde está tu base de datos. Crea el archivo
+                    <code>hibernate.cfg.xml</code> dentro de la carpeta <code>src</code>.
+                </p>
+
+                <div class="code-container">
+                    <div class="code-header">
+                        <span>hibernate.cfg.xml</span>
+                        <button class="copy-btn" onclick="copyCode('xml-code')">Copiar</button>
+                    </div>
+                    <pre id="xml-code">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!-- Si Eclipse da error de descarga, borra las líneas de DOCTYPE --&gt;
+&lt;!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd"&gt;
+        
+&lt;hibernate-configuration&gt;
+    &lt;session-factory&gt;
+        &lt;!-- 1. CONEXIÓN (Modificar estos datos) --&gt;
+        &lt;property name="connection.driver_class"&gt;com.mysql.cj.jdbc.Driver&lt;/property&gt;
+        &lt;property name="connection.url"&gt;jdbc:mysql://localhost:3306/TU_BASE_DE_DATOS&lt;/property&gt;
+        &lt;property name="connection.username"&gt;root&lt;/property&gt;
+        &lt;property name="connection.password"&gt;TU_CONTRASEÑA&lt;/property&gt;
+
+        &lt;!-- 2. CONFIGURACIÓN --&gt;
+        &lt;property name="show_sql"&gt;true&lt;/property&gt;
+        &lt;property name="dialect"&gt;org.hibernate.dialect.MySQLDialect&lt;/property&gt;
+        &lt;property name="hbm2ddl.auto"&gt;update&lt;/property&gt;
+
+        &lt;!-- 3. TUS CLASES (Añadir aquí) --&gt;
+        &lt;mapping class="com.tutorial.Videojuego"/&gt;
+        &lt;mapping class="com.tutorial.Plataforma"/&gt;
+        
+    &lt;/session-factory&gt;
+&lt;/hibernate-configuration&gt;</pre>
+                </div>
+            </section>
+
+            <footer
+                style="margin-top: 60px; padding: 20px; text-align: center; color: #888; border-top: 1px solid #eee;">
+                <p>Documentación generada para aprendizaje de Hibernate. | <a href="politica.html"
+                        style="color: inherit;">Política de Privacidad</a></p>
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

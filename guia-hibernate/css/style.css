@@ -1,0 +1,270 @@
+/* --- VARIABLES CSS (Tema Material Design 3) --- */
+:root {
+    --md-sys-color-primary: #6750a4;
+    --md-sys-color-on-primary: #ffffff;
+    --md-sys-color-primary-container: #eaddff;
+    --md-sys-color-on-primary-container: #21005d;
+    --md-sys-color-secondary: #625b71;
+    --md-sys-color-surface: #fef7ff;
+    --md-sys-color-surface-container: #f3edf7;
+    --md-sys-color-on-surface: #1d1b20;
+    --md-sys-color-outline: #79747e;
+    --md-sys-color-error: #b3261e;
+    --md-sys-color-error-container: #f9dedc;
+    
+    --border-radius-l: 24px;
+    --border-radius-m: 16px;
+    --border-radius-s: 8px;
+    
+    --shadow-1: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+    --shadow-2: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* --- RESET & BASICS --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    line-height: 1.6;
+    display: flex;
+    min-height: 100vh;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* --- LAYOUT --- */
+.app-container {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* --- SIDEBAR NAVIGATION --- */
+.sidebar {
+    width: 280px;
+    background-color: var(--md-sys-color-surface-container);
+    padding: 24px;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgba(0,0,0,0.05);
+    overflow-y: auto;
+}
+
+.brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--md-sys-color-primary);
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-link {
+    display: block;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    border-radius: var(--border-radius-m);
+    color: var(--md-sys-color-on-surface);
+    transition: background 0.2s, color 0.2s;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    background-color: rgba(103, 80, 164, 0.08);
+}
+
+.nav-link.active {
+    background-color: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+}
+
+/* --- MAIN CONTENT --- */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    max-width: 1000px;
+}
+
+/* --- TYPOGRAPHY & ELEMENTS --- */
+h1 {
+    font-size: 3rem;
+    color: var(--md-sys-color-primary);
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 48px;
+    margin-bottom: 24px;
+    color: var(--md-sys-color-on-surface);
+    border-bottom: 2px solid var(--md-sys-color-primary-container);
+    padding-bottom: 8px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    color: var(--md-sys-color-secondary);
+}
+
+p { margin-bottom: 16px; font-size: 1.1rem; }
+
+/* --- CARDS --- */
+.card {
+    background-color: white;
+    border-radius: var(--border-radius-l);
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow-1);
+    transition: box-shadow 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.02);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-2);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--md-sys-color-primary);
+}
+
+/* --- ALERTS & INFO --- */
+.alert {
+    padding: 16px;
+    border-radius: var(--border-radius-m);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.alert-error {
+    background-color: var(--md-sys-color-error-container);
+    color: var(--md-sys-color-error);
+    font-weight: bold;
+}
+
+.alert-info {
+    background-color: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+}
+
+/* --- BUTTONS --- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 24px;
+    border-radius: 100px;
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    font-weight: 500;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.btn:hover {
+    background-color: #55408a; /* Darker shade of primary */
+    box-shadow: var(--shadow-1);
+}
+
+.btn-small {
+    padding: 6px 16px;
+    font-size: 0.9rem;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--md-sys-color-outline);
+    color: var(--md-sys-color-on-surface);
+}
+
+.btn-outline:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+
+/* --- CODE BLOCKS --- */
+.code-container {
+    position: relative;
+    background-color: #1e1e1e;
+    border-radius: var(--border-radius-m);
+    overflow: hidden;
+    margin: 16px 0;
+}
+
+.code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    background-color: #2d2d2d;
+    color: #ccc;
+    font-size: 0.85rem;
+    font-family: monospace;
+}
+
+pre {
+    padding: 16px;
+    overflow-x: auto;
+    color: #d4d4d4;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.95rem;
+}
+
+.copy-btn {
+    background: transparent;
+    border: 1px solid #555;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.75rem;
+}
+
+.copy-btn:hover { background: #444; }
+
+/* --- TABLE --- */
+.download-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+.download-table th, .download-table td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.download-table th {
+    color: var(--md-sys-color-secondary);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .app-container { flex-direction: column; }
+    .sidebar { width: 100%; height: auto; position: relative; padding: 16px; }
+    .main-content { padding: 20px; }
+    h1 { font-size: 2rem; }
+}
